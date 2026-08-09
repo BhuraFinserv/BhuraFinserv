@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayushman Financial Services | Wealth That Outlives You</title>
+  <meta name="description"
+    content="Aayushman Financial Services Pvt. Ltd. — premium wealth management and financial planning for families across India. Mutual Funds, PMS, AIF, Insurance, Estate Planning.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+
+  <!-- Lottie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0A1830', 50: '#EEF1F6', 100: '#D6DEEA', 200: '#AEBDD5', 300: '#8598BC', 400: '#5C74A0', 500: '#3A517F', 600: '#243863', 700: '#152647', 800: '#0F1C36', 900: '#0A1830', 950: '#060E1D' },
+            gold: { DEFAULT: '#C9A24B', 50: '#FBF6EA', 100: '#F4E7C6', 200: '#EAD49A', 300: '#DFC06D', 400: '#D5B056', 500: '#C9A24B', 600: '#AB853A', 700: '#87682E', 800: '#634B21', 900: '#402F15' },
+            emerald: { DEFAULT: '#12704F' },
+            offwhite: '#F7F8FA',
+          },
+          fontFamily: {
+            heading: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            premium: '0 20px 60px -15px rgba(10,24,48,0.25)',
+            soft: '0 10px 30px -10px rgba(10,24,48,0.12)',
+            gold: '0 10px 30px -10px rgba(201,162,75,0.4)',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-slow': 'float 9s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-16px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-offwhite text-navy antialiased">
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="text-center">
+      <div class="font-heading text-gold text-2xl tracking-[0.3em] mb-4">AAYUSHMAN</div>
+      <div class="w-40 h-[2px] bg-white/10 mx-auto overflow-hidden rounded-full">
+        <div id="loader-bar" class="h-full bg-gold w-0"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scroll-progress"></div>
+  <div id="cursor-glow" class="hidden md:block"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+          <span class="inline-flex items-center">
+            <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+          </span>
+        </div>
+        <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA FINSERV</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+        <a href="#who-we-are" id="nav-link-1" class="nav-link text-white/90 hover:text-white transition">About</a>
+        <a href="#services" id="nav-link-2" class="nav-link text-white/90 hover:text-white transition">Services</a>
+        <a href="#process" id="nav-link-3" class="nav-link text-white/90 hover:text-white transition">Process</a>
+        <a href="#knowledge" id="nav-link-5" class="nav-link text-white/90 hover:text-white transition">Insights</a>
+        <a href="#contact" id="nav-link-6" class="nav-link text-white/90 hover:text-white transition">Contact</a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="https://www.ifaplanet.com/login.php" id="nav-login"
+          class="text-sm font-medium text-white/90 hover:text-white transition">Client
+          Login</a>
+        <a href="#appointment"
+          class="btn-ripple bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">Book
+          Consultation</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="fixed inset-0 z-[60] bg-navy-950 translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex justify-between items-center px-6 py-6">
+      <span class="font-heading font-bold text-gold text-lg tracking-wide">BHURA FINSERV</span>
+      <button id="mobile-menu-close" class="text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="flex flex-col gap-6 px-8 mt-10 font-heading text-2xl text-white">
+      <a href="#who-we-are" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#knowledge" class="mobile-link">Insights</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#appointment"
+        class="mt-6 inline-block bg-gold text-navy text-center font-semibold text-base px-6 py-4 rounded-full">Book
+        Consultation</a>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="relative min-h-screen w-full overflow-hidden bg-navy flex items-center">
+    <canvas id="hero-canvas"></canvas>
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-950/40 via-navy/70 to-navy pointer-events-none"></div>
+    <div
+      class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[120px] animate-float-slow pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-navy-500/20 rounded-full blur-[120px] pointer-events-none">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 w-full">
+      <p class="kicker reveal-up" data-reveal>SEBI Registered &middot; AMFI Registered &middot; Est. 1984</p>
+      <h1
+        class="font-heading text-white font-extrabold leading-[1.05] text-5xl sm:text-6xl lg:text-[5.5rem] mt-6 max-w-5xl reveal-up"
+        data-reveal>
+        Wealth That <span class="text-gold-gradient">Outlives</span> You.
+      </h1>
+      <p class="text-white/70 text-lg lg:text-xl max-w-2xl mt-8 leading-relaxed reveal-up" data-reveal>
+        Helping families build, preserve and transfer wealth across generations through disciplined investing, rigorous
+        planning and a partnership built on trust.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-10 reveal-up" data-reveal>
+        <a href="#appointment"
+          class="btn-ripple bg-gold hover:brightness-110 text-navy font-semibold text-base px-8 py-4 rounded-full transition shadow-gold text-center">
+          Book Consultation <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+        </a>
+        <a href="#services"
+          class="btn-ripple glass text-white font-semibold text-base px-8 py-4 rounded-full transition text-center hover:bg-white/10">
+          Explore Services
+        </a>
+      </div>
+
+      <!-- Animated Stats -->
+      <section class="stats-section">
+        <div class="stats-container">
+
+          <div class="stat-box">
+            <h2><span class="counter" data-target="1000" data-prefix="₹" data-suffix=" Cr+">0</span></h2>
+            <p>Assets Managed</p>
+          </div>
+
+          <div class="stat-box">
+            <h2><span class="counter" data-target="3200" data-suffix="+">1000+</span></h2>
+            <p>Clients Served</p>
+          </div>
+
+          <div class="stat-box">
+            <h2><span class="counter" data-target="42" data-suffix="+">42+</span></h2>
+            <p>Years Experience</p>
+          </div>
+
+          <div class="stat-box">
+            <h2><span class="counter" data-target="6" data-prefix="₹" data-suffix=" Cr+">₹6 Cr+</span></h2>
+            <p>Monthly SIP Flow</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 text-xs flex flex-col items-center gap-2 animate-float">
+      <span class="tracking-widest">SCROLL</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="bg-navy-950 py-10 overflow-hidden border-t border-white/5">
+    <p class="text-center text-white/40 text-xs tracking-[0.2em] uppercase mb-6">Regulated &amp; Empanelled With</p>
+    <div class="no-scrollbar overflow-hidden">
+      <div class="marquee-track items-center gap-16">
+        <span class="trust-logo">AMFI</span>
+        <span class="trust-logo">MFU</span>
+        <span class="trust-logo">BSE STAR MF</span>
+        <span class="trust-logo">NSE</span>
+        <span class="trust-logo">SEBI</span>
+        <span class="trust-logo">HDFC MF</span>
+        <span class="trust-logo">ICICI Prudential</span>
+        <span class="trust-logo">SBI Mutual Fund</span>
+        <span class="trust-logo">Nippon India MF</span>
+        <span class="trust-logo">Kotak MF</span>
+        <!-- duplicate for seamless loop -->
+        <span class="trust-logo">AMFI</span>
+        <span class="trust-logo">MFU</span>
+        <span class="trust-logo">BSE STAR MF</span>
+        <span class="trust-logo">NSE</span>
+        <span class="trust-logo">SEBI</span>
+        <span class="trust-logo">HDFC MF</span>
+        <span class="trust-logo">ICICI Prudential</span>
+        <span class="trust-logo">SBI Mutual Fund</span>
+        <span class="trust-logo">Nippon India MF</span>
+        <span class="trust-logo">Kotak MF</span>
+      </div>
+    </div>
+  </section>
+  <!-- ============ WHO WE ARE ============ -->
+  <section id="who-we-are" class="py-28 lg:py-36 bg-offwhite overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative reveal-left" data-reveal>
+        <div
+          class="aspect-[4/5] rounded-3xl bg-gradient-to-br from-navy to-navy-700 relative overflow-hidden shadow-premium">
+          <div class="absolute inset-0 opacity-20"
+            style="background-image:radial-gradient(circle at 30% 20%, #C9A24B 0%, transparent 45%);"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full glass flex items-center justify-center">
+              <i class="fa-solid fa-play text-white text-2xl ml-1"></i>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 glass text-white">
+            <p class="font-heading font-semibold text-lg">Meet the founders</p>
+            <p class="text-white/60 text-sm mt-1">A short film on our philosophy — 2 min</p>
+          </div>
+        </div>
+        <div class="absolute -bottom-8 -right-6 lg:-right-10 glass-light rounded-2xl shadow-soft p-6 w-52">
+          <p class="text-3xl font-heading font-bold text-navy">42+</p>
+          <p class="text-sm text-navy/60 mt-1">Years guiding Indian families toward financial independence</p>
+        </div>
+      </div>
+
+      <div class="reveal-right" data-reveal>
+        <p class="kicker text-gold">Who We Are</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 leading-tight">A partner for every chapter of your
+          wealth story.</h2>
+        <p class="text-navy/60 text-lg mt-6 leading-relaxed">
+          Aayushman Financial Services was founded on a simple conviction: that disciplined, unbiased advice compounds
+          into extraordinary outcomes. We combine institutional-grade research with the personal attention of a family
+          office — so every recommendation is built around your goals, not a product target.
+        </p>
+
+        <div class="mt-10 space-y-8 border-l border-navy/10 pl-8">
+          <div class="relative timeline-item">
+            <span class="absolute -left-[38px] top-1 w-3 h-3 rounded-full bg-gold"></span>
+            <p class="font-heading font-semibold text-lg">1984 — Foundation</p>
+            <p class="text-navy/55 text-sm mt-1">Started as a life insurance distribution firm. Achieved MDRT
+              recognition within just 5 years.</p>
+          </div>
+          <div class="relative timeline-item">
+            <span class="absolute -left-[38px] top-1 w-3 h-3 rounded-full bg-gold"></span>
+            <p class="font-heading font-semibold text-lg">2008 — Expansion</p>
+            <p class="text-navy/55 text-sm mt-1">Expanded into wealth and asset management, offering comprehensive
+              investment solutions.</p>
+          </div>
+          <div class="relative timeline-item">
+            <span class="absolute -left-[38px] top-1 w-3 h-3 rounded-full bg-gold"></span>
+            <p class="font-heading font-semibold text-lg">2019 — Three Generations, One Vision</p>
+            <p class="text-navy/55 text-sm mt-1">A leading wealth management firm in Central India, driven by three
+              generations of expertise and trust.</p>
+          </div>
+          <div class="relative timeline-item">
+            <span class="absolute -left-[38px] top-1 w-3 h-3 rounded-full bg-gold"></span>
+            <p class="font-heading font-semibold text-lg">Today — ₹1,000 Cr+ AUM</p>
+            <p class="text-navy/55 text-sm mt-1">Serving 3,200+ clients across India and the NRI corridor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section id="why-us" class="py-28 lg:py-36 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker text-gold">Why Choose Us</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">Advice that spans your entire balance sheet.</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16" id="why-cards">
+        <!-- Cards injected via template below, static for reliability -->
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-chart-pie text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Financial Planning
+          </h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Goal-based
+            roadmaps that map every rupee to a purpose — retirement, education, or a legacy fund.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-seedling text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Mutual Funds</h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Curated,
+            research-backed fund portfolios rebalanced with market cycles, not emotion.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-building-columns text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Portfolio Management
+            (PMS)</h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Concentrated,
+            actively managed equity strategies for discerning high-net-worth investors.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-layer-group text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Alternative Investment
+            Funds (AIF)</h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Access to
+            pre-IPO, private credit and structured strategies once reserved for institutions.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-shield-halved text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Insurance</h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Term, health
+            and asset protection structured to close the exact gaps in your plan.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-file-invoice-dollar text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Tax Planning</h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Efficient
+            structuring across capital gains, income and estate to keep more of what you earn.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-umbrella-beach text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Retirement Planning
+          </h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">
+            Income-replacement strategies engineered so your lifestyle never depends on the market's mood.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-scroll text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Estate Planning</h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Wills, trusts
+            and succession frameworks that transfer wealth exactly as you intend.</p>
+        </div>
+        <div
+          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
+          data-reveal>
+          <i class="fa-solid fa-briefcase text-2xl text-gold mb-6 block"></i>
+          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Corporate Treasury
+          </h3>
+          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Surplus fund
+            management for businesses that treats liquidity and yield with equal discipline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR PROCESS ============ -->
+  <section id="process" class="py-28 lg:py-36 bg-navy relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[140px]"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker">Our Process</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 text-white">Five disciplined steps. One lifelong
+          relationship.</h2>
+      </div>
+
+      <div class="mt-24 relative">
+        <div class="hidden lg:block absolute top-8 left-0 right-0 h-[1px] bg-white/10">
+          <div id="process-line" class="h-full bg-gold w-0"></div>
+        </div>
+        <div class="grid lg:grid-cols-5 gap-12 lg:gap-6">
+          <div class="process-step text-center reveal-up" data-reveal>
+            <div
+              class="w-16 h-16 mx-auto rounded-full glass flex items-center justify-center relative z-10 border border-gold/40">
+              <i class="fa-solid fa-magnifying-glass text-gold"></i>
+            </div>
+            <p class="font-heading font-semibold text-white mt-6">Discover</p>
+            <p class="text-white/50 text-sm mt-2 leading-relaxed">Understand your goals, risk appetite &amp; family
+              context.</p>
+          </div>
+          <div class="process-step text-center reveal-up" data-reveal>
+            <div
+              class="w-16 h-16 mx-auto rounded-full glass flex items-center justify-center relative z-10 border border-gold/40">
+              <i class="fa-solid fa-compass-drafting text-gold"></i>
+            </div>
+            <p class="font-heading font-semibold text-white mt-6">Plan</p>
+            <p class="text-white/50 text-sm mt-2 leading-relaxed">Build a personalised, goal-mapped financial blueprint.
+            </p>
+          </div>
+          <div class="process-step text-center reveal-up" data-reveal>
+            <div
+              class="w-16 h-16 mx-auto rounded-full glass flex items-center justify-center relative z-10 border border-gold/40">
+              <i class="fa-solid fa-coins text-gold"></i>
+            </div>
+            <p class="font-heading font-semibold text-white mt-6">Invest</p>
+            <p class="text-white/50 text-sm mt-2 leading-relaxed">Deploy capital across curated, research-backed
+              instruments.</p>
+          </div>
+          <div class="process-step text-center reveal-up" data-reveal>
+            <div
+              class="w-16 h-16 mx-auto rounded-full glass flex items-center justify-center relative z-10 border border-gold/40">
+              <i class="fa-solid fa-arrows-rotate text-gold"></i>
+            </div>
+            <p class="font-heading font-semibold text-white mt-6">Review</p>
+            <p class="text-white/50 text-sm mt-2 leading-relaxed">Quarterly reviews to rebalance against life &amp;
+              markets.</p>
+          </div>
+          <div class="process-step text-center reveal-up" data-reveal>
+            <div
+              class="w-16 h-16 mx-auto rounded-full glass flex items-center justify-center relative z-10 border border-gold/40">
+              <i class="fa-solid fa-chart-line text-gold"></i>
+            </div>
+            <p class="font-heading font-semibold text-white mt-6">Grow</p>
+            <p class="text-white/50 text-sm mt-2 leading-relaxed">Compound steadily toward multi-generational wealth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="py-28 lg:py-36 bg-offwhite">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 reveal-up" data-reveal>
+        <div>
+          <p class="kicker text-gold">Services</p>
+          <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 max-w-xl">Comprehensive solutions, built around
+            you.</h2>
+        </div>
+        <p class="text-navy/55 max-w-sm">From your first SIP to a multi-generational trust — one team, one strategy,
+          every stage.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16" id="services-grid">
+        <!-- service cards -->
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Mutual Funds" data-icon="fa-seedling"
+          data-desc="Diversified, research-driven mutual fund portfolios across equity, debt and hybrid categories — rebalanced with discipline, not emotion."
+          data-points="Goal-mapped fund selection,Direct plan cost advantage,Quarterly rebalancing,SIP &amp; STP automation">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-seedling text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">Mutual Funds</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Curated portfolios across equity, debt &amp; hybrid
+            categories.</p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Portfolio Management (PMS) & Alternative Investment Funds (AIF)"
+          data-icon="fa-building-columns"
+          data-desc="Concentrated, actively managed equity portfolios for investors seeking a personalised, high-conviction approach beyond mutual funds."
+          data-points="Direct stock ownership,Dedicated portfolio manager,Customised risk mandates,Minimum ₹50 lakh entry">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-building-columns text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">PMS & AIF</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">High-conviction PMS and institutional-grade AIF
+            strategies.
+          </p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Insurance" data-icon="fa-shield-halved"
+          data-desc="A full protection stack — term life, health, and asset insurance — structured to close the exact gaps a plan can't afford to leave open."
+          data-points="Term &amp; whole life cover,Family floater health plans,Critical illness riders,Claims assistance desk">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-shield-halved text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">Insurance</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Term, health &amp; asset protection built into your plan.
+          </p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Financial Planning" data-icon="fa-chart-pie"
+          data-desc="A comprehensive, goal-based roadmap that maps every rupee to a purpose — retirement, education, a home, or a legacy fund."
+          data-points="Cash-flow &amp; net-worth mapping,Goal prioritisation model,Risk profiling,Annual plan refresh">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-chart-pie text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">Financial Planning</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Goal-based roadmaps mapping every rupee to a purpose.</p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Retirement Planning" data-icon="fa-umbrella-beach"
+          data-desc="Income-replacement strategies engineered so your lifestyle never depends on the market's mood once the paycheque stops."
+          data-points="Corpus &amp; withdrawal modelling,Inflation-adjusted income,Annuity &amp; SWP structuring,Healthcare cost buffer">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-umbrella-beach text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">Retirement Planning</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Income-replacement strategies for a worry-free
+            retirement.</p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Estate Planning" data-icon="fa-scroll"
+          data-desc="Wills, trusts and succession frameworks that transfer wealth exactly as you intend — with minimal friction and maximum privacy."
+          data-points="Will drafting support,Family trust structuring,Nomination &amp; succession audit,Cross-border asset planning">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-scroll text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">Estate Planning</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Wills &amp; trusts that transfer wealth exactly as
+            intended.</p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          data-reveal data-title="Corporate Solutions" data-icon="fa-briefcase"
+          data-desc="Surplus fund and treasury management for businesses — balancing liquidity, safety and yield with institutional discipline."
+          data-points="Treasury &amp; liquidity management,Employee benefit structuring,Group insurance programs,Corporate FD &amp; debt funds">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-briefcase text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">Corporate Solutions</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Treasury &amp; benefit management for growing businesses.
+          </p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+
+        <div
+          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up sm:col-span-2 lg:col-span-1"
+          data-reveal data-title="NRI Investments" data-icon="fa-earth-asia"
+          data-desc="Seamless, compliant investment access into India for NRIs — from repatriable portfolios to property-linked wealth strategies."
+          data-points="NRE/NRO advisory,FEMA-compliant structuring,Remote onboarding &amp; e-KYC,Dedicated NRI relationship desk">
+          <div
+            class="w-14 h-14 rounded-2xl bg-navy/5 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-earth-asia text-navy group-hover:text-gold transition-colors text-xl"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg mt-6">NRI Investments</h3>
+          <p class="text-navy/50 text-sm mt-2 leading-relaxed">Compliant, seamless India investment access for NRIs.</p>
+          <span
+            class="inline-flex items-center gap-2 text-sm font-medium text-gold mt-5 opacity-0 group-hover:opacity-100 transition-opacity">Learn
+            more <i class="fa-solid fa-arrow-right text-xs"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Modal -->
+  <div id="service-modal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 modal-backdrop bg-navy/60">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 lg:p-10 relative shadow-premium max-h-[85vh] overflow-y-auto">
+      <button id="service-modal-close"
+        class="absolute top-6 right-6 w-9 h-9 rounded-full bg-navy/5 hover:bg-navy/10 flex items-center justify-center transition"><i
+          class="fa-solid fa-xmark"></i></button>
+      <div id="modal-icon" class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center"><i
+          class="fa-solid fa-seedling text-gold text-xl"></i></div>
+      <h3 id="modal-title" class="font-heading font-bold text-2xl mt-6">Service Title</h3>
+      <p id="modal-desc" class="text-navy/60 mt-3 leading-relaxed">Description</p>
+      <ul id="modal-points" class="mt-6 space-y-3"></ul>
+      <a href="#appointment" id="modal-cta"
+        class="mt-8 inline-flex items-center gap-2 bg-navy text-white font-medium text-sm px-6 py-3.5 rounded-full hover:bg-navy-700 transition">Discuss
+        This Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+  </div>
+
+  <!-- ============ TEAM ============ -->
+  <section id="team" class="py-28 lg:py-36 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker text-gold">Leadership</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">The team behind every portfolio.</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
+          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
+            <i class="fa-solid fa-user text-white/15 text-7xl"></i>
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
+            <p class="font-heading font-semibold text-white text-lg">KC BHURA</p>
+            <p class="text-gold text-xs mt-1">FOUNDER &amp; Visionary </p>
+
+
+            <p
+              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              42 yrs in wealth management. CFP, SEBI RIA.</p>
+            <a href="#"
+              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
+          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
+            <i class="fa-solid fa-user text-white/15 text-7xl"></i>
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
+            <p class="font-heading font-semibold text-white text-lg">Lilam Kumar Bhura
+            </p>
+            <p class="text-gold text-xs mt-1">Managing Director &amp; Builder
+            </p>
+            <p
+              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              18 yrs equity research. CFA charterholder. Ex-Kotak AMC.</p>
+            <a href="#"
+              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
+          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
+            <i class="fa-solid fa-user text-white/15 text-7xl"></i>
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
+            <p class="font-heading font-semibold text-white text-lg"> Aayush Bhura
+            </p>
+            <p class="text-gold text-xs mt-1">Director &amp; Modernist
+            </p>
+            <p
+              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              15 yrs planning practice. CFP. Specialist in retirement design.</p>
+            <a href="#"
+              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
+          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
+            <i class="fa-solid fa-user text-white/15 text-7xl"></i>
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
+            <p class="font-heading font-semibold text-white text-lg">Rishika Bhura</p>
+            <p class="text-gold text-xs mt-1">Wife of Director</p>
+            <p
+              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              12 yrs in private wealth servicing. NRI desk lead.</p>
+            <a href="#"
+              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="py-28 lg:py-36 bg-navy relative overflow-hidden">
+    <div class="absolute bottom-0 right-0 w-[450px] h-[450px] bg-gold/5 rounded-full blur-[130px]"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker">Client Stories</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 text-white">Trusted with what matters most.</h2>
+      </div>
+
+      <div class="mt-16 relative">
+        <div id="testimonial-track" class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
+          <div class="testimonial-card snap-center shrink-0 w-[85%] sm:w-[420px] glass rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6"><i
+                class="fa-solid fa-play text-white/70"></i></div>
+            <p class="text-white/80 leading-relaxed">"Aayushman restructured our family's investments after my father's
+              passing. The estate transition was seamless — something I didn't think was possible with Indian
+              paperwork."</p>
+            <div class="flex items-center gap-3 mt-6">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold text-sm font-bold">S
+              </div>
+              <div>
+                <p class="text-white font-medium text-sm">Sanjay Rathi</p>
+                <p class="text-white/40 text-xs">Business Owner, Pune</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card snap-center shrink-0 w-[85%] sm:w-[420px] glass rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6"><i
+                class="fa-solid fa-play text-white/70"></i></div>
+            <p class="text-white/80 leading-relaxed">"As an NRI, I was nervous about investing back home. Their team
+              made compliance and remote onboarding completely painless — I check my dashboard, not my inbox."</p>
+            <div class="flex items-center gap-3 mt-6">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold text-sm font-bold">P
+              </div>
+              <div>
+                <p class="text-white font-medium text-sm">Priya Iyer</p>
+                <p class="text-white/40 text-xs">NRI Client, Dubai</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card snap-center shrink-0 w-[85%] sm:w-[420px] glass rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6"><i
+                class="fa-solid fa-play text-white/70"></i></div>
+            <p class="text-white/80 leading-relaxed">"Fourteen years, three market crashes, and they never once let us
+              panic-sell. That discipline is the entire reason we retired comfortably, five years early."</p>
+            <div class="flex items-center gap-3 mt-6">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold text-sm font-bold">R
+              </div>
+              <div>
+                <p class="text-white font-medium text-sm">Ramesh &amp; Anita Deshmukh</p>
+                <p class="text-white/40 text-xs">Retired Educators, Nagpur</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card snap-center shrink-0 w-[85%] sm:w-[420px] glass rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6"><i
+                class="fa-solid fa-play text-white/70"></i></div>
+            <p class="text-white/80 leading-relaxed">"They manage our company's surplus treasury with the same rigor as
+              our personal portfolios. Institutional quality, boutique attention."</p>
+            <div class="flex items-center gap-3 mt-6">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold text-sm font-bold">K
+              </div>
+              <div>
+                <p class="text-white font-medium text-sm">Karan Bhatia</p>
+                <p class="text-white/40 text-xs">CFO, Bhatia Textiles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center gap-3 mt-8">
+          <button id="testi-prev"
+            class="w-11 h-11 rounded-full glass text-white flex items-center justify-center hover:bg-white/15 transition"><i
+              class="fa-solid fa-arrow-left text-sm"></i></button>
+          <button id="testi-next"
+            class="w-11 h-11 rounded-full glass text-white flex items-center justify-center hover:bg-white/15 transition"><i
+              class="fa-solid fa-arrow-right text-sm"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ KNOWLEDGE CENTRE ============ -->
+  <section id="knowledge" class="py-28 lg:py-36 bg-offwhite">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 reveal-up" data-reveal>
+        <div>
+          <p class="kicker text-gold">Knowledge Centre</p>
+          <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 max-w-xl">Insight, before instinct.</h2>
+        </div>
+      </div>
+
+      <div id="know-track" class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 mt-16">
+
+        <!-- Card 1 -->
+        <a href="#"
+          class="know-card group rounded-3xl overflow-hidden bg-white border border-navy/8 hover:shadow-soft transition-all reveal-up snap-center shrink-0 w-[85%] sm:w-[420px]"
+          data-reveal>
+
+          <div class="h-44 bg-gradient-to-br from-navy to-navy-700 relative">
+            <span
+              class="absolute top-4 left-4 text-[11px] font-semibold tracking-wide uppercase bg-gold text-navy px-3 py-1 rounded-full">
+              Article
+            </span>
+          </div>
+
+          <div class="p-6">
+            <p class="text-navy/40 text-xs mb-2">6 min read</p>
+            <h3 class="font-heading font-semibold text-lg group-hover:text-gold transition-colors">
+              Why Asset Allocation Beats Fund Selection
+            </h3>
+          </div>
+
+        </a>
+
+
+        <!-- Card 2 -->
+        <a href="#"
+          class="know-card group rounded-3xl overflow-hidden bg-white border border-navy/8 hover:shadow-soft transition-all reveal-up snap-center shrink-0 w-[85%] sm:w-[420px]"
+          data-reveal>
+
+          <div class="h-44 bg-gradient-to-br from-navy-700 to-navy relative">
+            <span
+              class="absolute top-4 left-4 text-[11px] font-semibold tracking-wide uppercase bg-white text-navy px-3 py-1 rounded-full">
+              Video
+            </span>
+          </div>
+
+          <div class="p-6">
+            <p class="text-navy/40 text-xs mb-2">9 min watch</p>
+            <h3 class="font-heading font-semibold text-lg group-hover:text-gold transition-colors">
+              Decoding the FY26 Union Budget for Investors
+            </h3>
+          </div>
+
+        </a>
+
+
+        <!-- Card 3 -->
+        <a href="#"
+          class="know-card group rounded-3xl overflow-hidden bg-white border border-navy/8 hover:shadow-soft transition-all reveal-up snap-center shrink-0 w-[85%] sm:w-[420px]"
+          data-reveal>
+
+          <div class="h-44 bg-gradient-to-br from-navy to-navy-800 relative">
+            <span
+              class="absolute top-4 left-4 text-[11px] font-semibold tracking-wide uppercase bg-emerald text-white px-3 py-1 rounded-full">
+              Market Update
+            </span>
+          </div>
+
+          <div class="p-6">
+            <p class="text-navy/40 text-xs mb-2">Weekly</p>
+            <h3 class="font-heading font-semibold text-lg group-hover:text-gold transition-colors">
+              Sensex, Nifty &amp; Global Cues This Week
+            </h3>
+          </div>
+
+        </a>
+
+
+        <!-- Card 4 -->
+        <a href="#"
+          class="know-card group rounded-3xl overflow-hidden bg-white border border-navy/8 hover:shadow-soft transition-all reveal-up snap-center shrink-0 w-[85%] sm:w-[420px]"
+          data-reveal>
+
+          <div class="h-44 bg-gradient-to-br from-navy-700 to-navy relative">
+            <span
+              class="absolute top-4 left-4 text-[11px] font-semibold tracking-wide uppercase bg-gold text-navy px-3 py-1 rounded-full">
+              Calculator
+            </span>
+          </div>
+
+          <div class="p-6">
+            <p class="text-navy/40 text-xs mb-2">Tool</p>
+            <h3 class="font-heading font-semibold text-lg group-hover:text-gold transition-colors">
+              SIP &amp; Retirement Corpus Calculators
+            </h3>
+          </div>
+
+        </a>
+
+
+        <!-- Card 5 -->
+        <a href="#"
+          class="know-card group rounded-3xl overflow-hidden bg-white border border-navy/8 hover:shadow-soft transition-all reveal-up snap-center shrink-0 w-[85%] sm:w-[420px]"
+          data-reveal>
+
+          <div class="h-44 bg-gradient-to-br from-navy to-navy-700 relative">
+            <span
+              class="absolute top-4 left-4 text-[11px] font-semibold tracking-wide uppercase bg-white text-navy px-3 py-1 rounded-full">
+              Research
+            </span>
+          </div>
+
+          <div class="p-6">
+            <p class="text-navy/40 text-xs mb-2">12 min read</p>
+            <h3 class="font-heading font-semibold text-lg group-hover:text-gold transition-colors">
+              Our House View: Equity Markets FY27
+            </h3>
+          </div>
+
+        </a>
+
+
+        <!-- Card 6 -->
+        <a href="#"
+          class="know-card group rounded-3xl overflow-hidden bg-white border border-navy/8 hover:shadow-soft transition-all reveal-up snap-center shrink-0 w-[85%] sm:w-[420px]"
+          data-reveal>
+
+          <div class="h-44 bg-gradient-to-br from-navy-800 to-navy relative">
+            <span
+              class="absolute top-4 left-4 text-[11px] font-semibold tracking-wide uppercase bg-gold text-navy px-3 py-1 rounded-full">
+              Tax Guide
+            </span>
+          </div>
+
+          <div class="p-6">
+            <p class="text-navy/40 text-xs mb-2">8 min read</p>
+            <h3 class="font-heading font-semibold text-lg group-hover:text-gold transition-colors">
+              Capital Gains Tax: A Complete FY26 Guide
+            </h3>
+          </div>
+
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINANCIAL HEALTH CHECK ============ -->
+  <section id="health-check" class="py-28 lg:py-36 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-start">
+      <div class="reveal-left" data-reveal>
+        <p class="kicker text-gold">Interactive Tool</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 leading-tight">What's your Financial Health Score?
+        </h2>
+        <p class="text-navy/55 mt-5">Answer six quick questions for an instant, personalised score and recommendations.
+        </p>
+
+        <form id="health-form" class="mt-10 space-y-6">
+          <div>
+            <label class="text-sm font-medium block mb-2">Monthly Income (₹)</label>
+            <input type="range" id="hc-income" min="20000" max="1000000" step="5000" value="150000"
+              class="w-full accent-gold">
+            <div class="text-navy/50 text-xs mt-1"><span id="hc-income-val">₹1,50,000</span> / month</div>
+          </div>
+          <div>
+            <label class="text-sm font-medium block mb-2">Monthly Savings Rate</label>
+            <input type="range" id="hc-savings" min="0" max="60" step="1" value="20" class="w-full accent-gold">
+            <div class="text-navy/50 text-xs mt-1"><span id="hc-savings-val">20</span>% of income</div>
+          </div>
+          <div>
+            <label class="text-sm font-medium block mb-2">Existing Debt (EMI as % of income)</label>
+            <input type="range" id="hc-debt" min="0" max="70" step="1" value="15" class="w-full accent-gold">
+            <div class="text-navy/50 text-xs mt-1"><span id="hc-debt-val">15</span>%</div>
+          </div>
+          <div>
+            <label class="text-sm font-medium block mb-2">Emergency Fund Coverage</label>
+            <input type="range" id="hc-emergency" min="0" max="12" step="1" value="3" class="w-full accent-gold">
+            <div class="text-navy/50 text-xs mt-1"><span id="hc-emergency-val">3</span> months of expenses</div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" id="hc-insurance" checked
+                class="accent-gold w-4 h-4"> Have adequate insurance</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" id="hc-goals" checked
+                class="accent-gold w-4 h-4"> Have defined financial goals</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="reveal-right glass-light rounded-3xl p-10 shadow-premium sticky top-28" data-reveal>
+        <p class="text-center text-navy/50 text-sm mb-6">Your Financial Health Score</p>
+        <div class="relative w-56 h-56 mx-auto">
+          <svg viewBox="0 0 200 200" class="w-full h-full -rotate-90">
+            <circle cx="100" cy="100" r="85" fill="none" stroke="#E8E9ED" stroke-width="14" />
+            <circle id="gauge-circle" class="gauge-arc" cx="100" cy="100" r="85" fill="none" stroke="#C9A24B"
+              stroke-width="14" stroke-linecap="round" stroke-dasharray="534" stroke-dashoffset="534" />
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <span id="gauge-score" class="font-heading font-extrabold text-5xl text-navy">0</span>
+            <span class="text-navy/40 text-xs mt-1">out of 100</span>
+          </div>
+        </div>
+        <p id="gauge-label" class="text-center font-heading font-semibold text-lg mt-6 text-navy">Calculating...</p>
+
+        <div id="gauge-recs" class="mt-8 space-y-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIP & RETIREMENT CALCULATORS ============ -->
+  <section id="calculators" class="py-28 lg:py-36 bg-offwhite">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker text-gold">Plan With Precision</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">See the numbers before you commit.</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6 mt-16">
+        <!-- SIP Calculator -->
+        <div class="bg-white rounded-3xl border border-navy/8 p-8 lg:p-10 reveal-up" data-reveal>
+          <h3 class="font-heading font-bold text-2xl">SIP Calculator</h3>
+          <p class="text-navy/50 text-sm mt-2">Estimate the future value of your monthly investments.</p>
+          <div class="mt-8 space-y-6">
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Monthly Investment</span><span
+                  id="sip-amt-val" class="text-gold font-semibold">₹25,000</span></div>
+              <input type="range" id="sip-amount" min="1000" max="200000" step="1000" value="25000"
+                class="w-full accent-gold">
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Investment Period</span><span
+                  id="sip-years-val" class="text-gold font-semibold">15 yrs</span></div>
+              <input type="range" id="sip-years" min="1" max="40" step="1" value="15" class="w-full accent-gold">
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Expected Annual
+                  Return</span><span id="sip-return-val" class="text-gold font-semibold">12%</span></div>
+              <input type="range" id="sip-return" min="4" max="20" step="0.5" value="12" class="w-full accent-gold">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-offwhite rounded-2xl p-5">
+              <p class="text-navy/50 text-xs">Invested Amount</p>
+              <p id="sip-invested" class="font-heading font-bold text-xl mt-1">₹45,00,000</p>
+            </div>
+            <div class="bg-navy rounded-2xl p-5">
+              <p class="text-white/50 text-xs">Estimated Value</p>
+              <p id="sip-total" class="font-heading font-bold text-xl mt-1 text-gold">₹1,26,98,432</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retirement Calculator -->
+        <div class="bg-white rounded-3xl border border-navy/8 p-8 lg:p-10 reveal-up" data-reveal>
+          <h3 class="font-heading font-bold text-2xl">Retirement Calculator</h3>
+          <p class="text-navy/50 text-sm mt-2">Find out the corpus you'll need to retire comfortably.</p>
+          <div class="mt-8 space-y-6">
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Current Age</span><span
+                  id="ret-age-val" class="text-gold font-semibold">32</span></div>
+              <input type="range" id="ret-age" min="20" max="55" step="1" value="32" class="w-full accent-gold">
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Retirement Age</span><span
+                  id="ret-retage-val" class="text-gold font-semibold">60</span></div>
+              <input type="range" id="ret-retage" min="45" max="70" step="1" value="60" class="w-full accent-gold">
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Monthly Expenses
+                  Today</span><span id="ret-exp-val" class="text-gold font-semibold">₹80,000</span></div>
+              <input type="range" id="ret-exp" min="10000" max="500000" step="5000" value="80000"
+                class="w-full accent-gold">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-offwhite rounded-2xl p-5">
+              <p class="text-navy/50 text-xs">Corpus Needed</p>
+              <p id="ret-corpus" class="font-heading font-bold text-xl mt-1">₹9,45,00,000</p>
+            </div>
+            <div class="bg-navy rounded-2xl p-5">
+              <p class="text-white/50 text-xs">Monthly SIP Required</p>
+              <p id="ret-sip" class="font-heading font-bold text-xl mt-1 text-gold">₹52,300</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPANY JOURNEY ============ -->
+  <section id="journey" class="py-28 lg:py-36 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker text-gold">Our Journey</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">From ₹0 to ₹10,000 Cr — one milestone at a time.
+        </h2>
+      </div>
+
+      <div class="mt-24 relative">
+        <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-[2px] bg-navy/10 -translate-y-1/2">
+          <div id="journey-line" class="h-full bg-gold w-0"></div>
+        </div>
+        <div class="grid lg:grid-cols-5 gap-10 lg:gap-4">
+          <div class="milestone text-center reveal-up" data-reveal>
+            <div class="w-4 h-4 rounded-full bg-navy mx-auto relative z-10 ring-8 ring-white"></div>
+            <p class="font-heading font-bold text-2xl mt-5">2011</p>
+            <p class="text-navy/50 text-sm mt-1">Founded</p>
+          </div>
+          <div class="milestone text-center reveal-up" data-reveal>
+            <div class="w-4 h-4 rounded-full bg-navy mx-auto relative z-10 ring-8 ring-white"></div>
+            <p class="font-heading font-bold text-2xl mt-5">₹100 Cr</p>
+            <p class="text-navy/50 text-sm mt-1">AUM — 2015</p>
+          </div>
+          <div class="milestone text-center reveal-up" data-reveal>
+            <div class="w-4 h-4 rounded-full bg-navy mx-auto relative z-10 ring-8 ring-white"></div>
+            <p class="font-heading font-bold text-2xl mt-5">₹250 Cr</p>
+            <p class="text-navy/50 text-sm mt-1">AUM — 2018</p>
+          </div>
+          <div class="milestone text-center reveal-up" data-reveal>
+            <div class="w-4 h-4 rounded-full bg-gold mx-auto relative z-10 ring-8 ring-white"></div>
+            <p class="font-heading font-bold text-2xl mt-5">₹600 Cr</p>
+            <p class="text-navy/50 text-sm mt-1">AUM — 2022</p>
+          </div>
+          <div class="milestone text-center reveal-up" data-reveal>
+            <div class="w-4 h-4 rounded-full bg-gold mx-auto relative z-10 ring-8 ring-white animate-pulse"></div>
+            <p class="font-heading font-bold text-2xl mt-5 text-gold">₹10,000 Cr</p>
+            <p class="text-navy/50 text-sm mt-1">Future Goal — 2032</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOK APPOINTMENT ============ -->
+  <section id="appointment" class="py-28 lg:py-36 bg-offwhite">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker text-gold">Get Started</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">Book a complimentary consultation.</h2>
+        <p class="text-navy/55 mt-5">Thirty minutes. No obligation. Just a clear-eyed look at where you stand.</p>
+      </div>
+
+      <div class="mt-16 grid lg:grid-cols-2 gap-0 bg-white rounded-3xl shadow-premium overflow-hidden reveal-up"
+        data-reveal>
+        <!-- Calendar -->
+        <div class="p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-navy/8">
+          <div class="flex items-center justify-between mb-6">
+            <button id="cal-prev"
+              class="w-9 h-9 rounded-full hover:bg-navy/5 flex items-center justify-center transition"><i
+                class="fa-solid fa-chevron-left text-sm"></i></button>
+            <p id="cal-month" class="font-heading font-semibold">August 2026</p>
+            <button id="cal-next"
+              class="w-9 h-9 rounded-full hover:bg-navy/5 flex items-center justify-center transition"><i
+                class="fa-solid fa-chevron-right text-sm"></i></button>
+          </div>
+          <div class="grid grid-cols-7 gap-1 text-center text-xs text-navy/40 mb-2">
+            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+          </div>
+          <div id="cal-grid" class="grid grid-cols-7 gap-1 text-center text-sm"></div>
+
+          <p class="text-sm font-medium mt-8 mb-3">Available Slots</p>
+          <div id="slot-grid" class="grid grid-cols-3 gap-2">
+            <button
+              class="slot-btn text-xs py-2.5 rounded-lg border border-navy/10 hover:border-gold hover:text-gold transition">10:00
+              AM</button>
+            <button
+              class="slot-btn text-xs py-2.5 rounded-lg border border-navy/10 hover:border-gold hover:text-gold transition">11:30
+              AM</button>
+            <button
+              class="slot-btn text-xs py-2.5 rounded-lg border border-navy/10 hover:border-gold hover:text-gold transition">2:00
+              PM</button>
+            <button
+              class="slot-btn text-xs py-2.5 rounded-lg border border-navy/10 hover:border-gold hover:text-gold transition">3:30
+              PM</button>
+            <button
+              class="slot-btn text-xs py-2.5 rounded-lg border border-navy/10 hover:border-gold hover:text-gold transition">4:30
+              PM</button>
+            <button
+              class="slot-btn text-xs py-2.5 rounded-lg border border-navy/10 hover:border-gold hover:text-gold transition">5:30
+              PM</button>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="p-8 lg:p-10" action="https://api.web3forms.com/submit" method="POST" id="appointment-form">
+          <input type="hidden" name="access_key" value="a419b7c0-0571-4152-a06e-ff4bfed2bc85">
+
+          <input type="hidden" name="appointment_date" id="appointment-date">
+
+          <input type="hidden" name="appointment_time" id="appointment-time">
+          <div class="space-y-5">
+            <div>
+              <label class="text-sm font-medium block mb-2">Full Name</label>
+              <input type="text" required placeholder="Your name" name="name"
+                class="w-full border border-navy/12 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-gold transition">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-medium block mb-2">Email</label>
+                <input type="email" required placeholder="you@email.com" name="email"
+                  class="w-full border border-navy/12 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-gold transition">
+              </div>
+              <div>
+                <label class="text-sm font-medium block mb-2">Phone</label>
+                <input type="tel" required placeholder="+91 98xxxxxxx" name="phone"
+                  class="w-full border border-navy/12 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-gold transition">
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-medium block mb-2">I'm interested in</label>
+              <select
+                class="w-full border border-navy/12 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-gold transition bg-white"
+                name="service">
+                <option>Financial Planning</option>
+                <option>Mutual Funds</option>
+                <option>PMS / AIF</option>
+                <option>Retirement Planning</option>
+                <option>Estate Planning</option>
+                <option>NRI Investments</option>
+                <option>Corporate Solutions</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm font-medium block mb-2">Message (optional)</label>
+              <textarea rows="3" placeholder="Tell us briefly about your goals" name="message"
+                class="w-full border border-navy/12 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-gold transition resize-none"></textarea>
+            </div>
+            <button type="submit"
+              class="btn-ripple w-full bg-navy hover:bg-navy-700 text-white font-semibold text-sm py-4 rounded-full transition">
+              Confirm Consultation
+            </button>
+            <p class="text-navy/40 text-xs text-center">
+              We'll never share your information.
+              SEBI Reg. No. INA000012345
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="py-28 lg:py-36 bg-navy relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
+        <p class="kicker">Contact Us</p>
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 text-white">Let's talk about your future.</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6 mt-16">
+        <div class="glass rounded-3xl p-8 reveal-up" data-reveal>
+          <i class="fa-solid fa-location-dot text-gold text-xl mb-4 block"></i>
+          <p class="font-heading font-semibold text-white">Head Office</p>
+          <p class="text-white/55 text-sm mt-2 leading-relaxed">14th Floor, Aayushman Towers,<br>Bandra Kurla Complex,
+            Mumbai 400051</p>
+        </div>
+        <div class="glass rounded-3xl p-8 reveal-up" data-reveal>
+          <i class="fa-solid fa-phone text-gold text-xl mb-4 block"></i>
+          <p class="font-heading font-semibold text-white">Phone &amp; Email</p>
+          <p class="text-white/55 text-sm mt-2 leading-relaxed">+91 22 4000 1234<br>hello@aayushmanfinancial.in</p>
+        </div>
+        <div class="glass rounded-3xl p-8 reveal-up" data-reveal>
+          <i class="fa-solid fa-clock text-gold text-xl mb-4 block"></i>
+          <p class="font-heading font-semibold text-white">Working Hours</p>
+          <p class="text-white/55 text-sm mt-2 leading-relaxed">Mon – Fri: 9:30 AM – 6:30 PM<br>Saturday: 10:00 AM –
+            2:00 PM</p>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-3xl overflow-hidden glass reveal-up h-72 relative" data-reveal>
+        <div class="absolute inset-0 opacity-40"
+          style="background-image:linear-gradient(rgba(10,24,48,0.4),rgba(10,24,48,0.4)), repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.06) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.06) 40px);">
+        </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white/60">
+          <i class="fa-solid fa-map-location-dot text-3xl mb-3"></i>
+          <p class="text-sm">Interactive map — Bandra Kurla Complex, Mumbai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-950 pt-20 pb-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid md:grid-cols-5 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center"><span
+                class="font-heading text-gold text-sm font-bold">A</span></div>
+            <span class="font-heading font-bold tracking-wide text-white text-lg">AAYUSHMAN</span>
+          </div>
+          <p class="text-white/45 text-sm mt-5 leading-relaxed max-w-sm">Premium wealth management and financial
+            planning for Indian families — helping you build, preserve and transfer wealth across generations.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#who-we-are" class="hover:text-gold transition">About Us</a></li>
+            <li><a href="#team" class="hover:text-gold transition">Leadership</a></li>
+            <li><a href="#journey" class="hover:text-gold transition">Our Journey</a></li>
+            <li><a href="#knowledge" class="hover:text-gold transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Services</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#services" class="hover:text-gold transition">Mutual Funds</a></li>
+            <li><a href="#services" class="hover:text-gold transition">PMS &amp; AIF</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Retirement Planning</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Estate Planning</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Resources</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#calculators" class="hover:text-gold transition">Calculators</a></li>
+            <li><a href="#knowledge" class="hover:text-gold transition">Market Updates</a></li>
+            <li><a href="https://www.ifaplanet.com/login.php" class="hover:text-gold transition">Client Login</a></li>
+            <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/10 mt-14 pt-8 flex flex-col lg:flex-row justify-between gap-4 text-white/35 text-xs leading-relaxed">
+        <p>&copy; 2026 Aayushman Financial Services Pvt. Ltd. All rights reserved. AMFI Registered Mutual Fund
+          Distributor, ARN-98765. SEBI Registered Investment Adviser, INA000012345.</p>
+        <div class="flex gap-6 shrink-0">
+          <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+          <a href="#" class="hover:text-gold transition">Terms of Use</a>
+          <a href="#" class="hover:text-gold transition">Disclosures</a>
+        </div>
+      </div>
+      <p class="text-white/25 text-[11px] mt-6 leading-relaxed">Mutual fund investments are subject to market risks.
+        Please read all scheme-related documents carefully before investing. Past performance is not indicative of
+        future returns.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
