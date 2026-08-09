@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Aayushman Financial Services</title>
+    <meta name="description" content="Privacy Policy of Aayushman Financial Services Pvt. Ltd.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A1830',
+                        'navy-700': '#122744',
+                        gold: '#C9A24B',
+                        'gold-600': '#B38C3D',
+                        offwhite: '#F7F7F4',
+                        emerald: '#188A63'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['DM Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        premium: '0 24px 70px rgba(10,24,48,.10)',
+                        gold: '0 12px 30px rgba(201,162,75,.20)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #F7F7F4;
+            color: #0A1830;
+        }
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            backdrop-filter: blur(14px);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(110deg, #E7CA7A, #C9A24B, #F0D895);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .policy-card {
+            background: #fff;
+            border: 1px solid rgba(10, 24, 48, .08);
+            box-shadow: 0 18px 55px rgba(10, 24, 48, .06);
+        }
+
+        .policy-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.65rem;
+            line-height: 1.25;
+        }
+
+        .policy-card h3 {
+            font-weight: 700;
+            font-size: 1.02rem;
+            margin-top: 1.5rem;
+            margin-bottom: .45rem;
+        }
+
+        .policy-card p,
+        .policy-card li {
+            color: rgba(10, 24, 48, .62);
+            font-size: .95rem;
+            line-height: 1.8;
+        }
+
+        .policy-card ul {
+            list-style: disc;
+            padding-left: 1.25rem;
+            margin-top: .65rem;
+        }
+
+        .policy-card li {
+            margin: .25rem 0;
+        }
+
+        .policy-nav a.active {
+            color: #C9A24B;
+        }
+        .foot{
+            background-color: rgb(6 14 29 / var(--tw-bg-opacity, 1));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER: same visual/header structure -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+                    <span class="inline-flex items-center">
+                        <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+                    </span>
+                </div>
+                <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA
+                    FINSERV</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+                <a href="index.html#who-we-are" class="text-white/90 hover:text-white transition">About</a>
+                <a href="index.html#services" class="text-white/90 hover:text-white transition">Services</a>
+                <a href="index.html#process" class="text-white/90 hover:text-white transition">Process</a>
+                <a href="index.html#knowledge" class="text-white/90 hover:text-white transition">Insights</a>
+                <a href="index.html#contact" class="text-white/90 hover:text-white transition">Contact</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://www.ifaplanet.com/login.php"
+                    class="text-sm font-medium text-white/90 hover:text-white transition">Client Login</a>
+                <a href="index.html#appointment"
+                    class="bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">
+                    Book Consultation
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-navy px-6 py-5">
+            <div class="flex flex-col gap-5 text-sm">
+                <a href="index.html#who-we-are" class="text-white/85">About</a>
+                <a href="index.html#services" class="text-white/85">Services</a>
+                <a href="index.html#process" class="text-white/85">Process</a>
+                <a href="index.html#knowledge" class="text-white/85">Insights</a>
+                <a href="index.html#contact" class="text-white/85">Contact</a>
+                <a href="https://www.ifaplanet.com/login.php" class="text-white/85">Client Login</a>
+                <a href="index.html#appointment"
+                    class="bg-gold text-navy font-semibold px-5 py-3 rounded-full text-center">Book Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="relative overflow-hidden bg-navy pt-20">
+            <div class="absolute inset-0 opacity-30"
+                style="background-image:radial-gradient(circle at 15% 25%, rgba(201,162,75,.28), transparent 30%), radial-gradient(circle at 85% 80%, rgba(255,255,255,.08), transparent 28%);">
+            </div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+                <div class="max-w-4xl reveal">
+                    <p class="text-gold text-xs font-semibold tracking-[.25em] uppercase">Legal &amp; Compliance</p>
+                    <h1
+                        class="font-heading text-white font-extrabold text-5xl sm:text-6xl lg:text-7xl mt-5 leading-[1.05]">
+                        Privacy <span class="text-gold-gradient">Policy</span>
+                    </h1>
+                    <p class="text-white/65 text-lg lg:text-xl max-w-2xl mt-7 leading-relaxed">
+                        Your trust is central to our relationship. This policy explains how Aayushman Financial Services
+                        collects,
+                        uses, protects and handles information shared through our website and services.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3 mt-8">
+                        <span class="glass rounded-full px-4 py-2 text-white/70 text-xs">Effective: August 2026</span>
+                        <span class="glass rounded-full px-4 py-2 text-white/70 text-xs">Aayushman Financial Services
+                            Pvt. Ltd.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT -->
+        <section class="py-16 lg:py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+                <div class="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-16 items-start">
+
+                    <aside class="lg:sticky lg:top-28 policy-nav">
+                        <div class="policy-card rounded-3xl p-6">
+                            <p class="text-[11px] uppercase tracking-[.18em] font-semibold text-navy/40 mb-4">On this
+                                page</p>
+                            <nav class="space-y-3 text-sm">
+                                <a href="#overview" class="block hover:text-gold transition active">Overview</a>
+                                <a href="#information" class="block hover:text-gold transition">Information We
+                                    Collect</a>
+                                <a href="#use" class="block hover:text-gold transition">How We Use Information</a>
+                                <a href="#sharing" class="block hover:text-gold transition">Sharing &amp; Disclosure</a>
+                                <a href="#security" class="block hover:text-gold transition">Data Security</a>
+                                <a href="#cookies" class="block hover:text-gold transition">Cookies</a>
+                                <a href="#rights" class="block hover:text-gold transition">Your Rights</a>
+                                <a href="#retention" class="block hover:text-gold transition">Data Retention</a>
+                                <a href="#changes" class="block hover:text-gold transition">Policy Changes</a>
+                                <a href="#contact" class="block hover:text-gold transition">Contact Us</a>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <div class="space-y-6">
+                        <section id="overview" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">01</p>
+                            <h2 class="mt-3">Our commitment to privacy</h2>
+                            <p class="mt-5">
+                                Aayushman Financial Services Pvt. Ltd. respects the privacy of visitors, clients and
+                                prospective clients.
+                                We seek to handle personal information responsibly and only for legitimate business,
+                                service, compliance
+                                and communication purposes.
+                            </p>
+                            <p class="mt-4">
+                                By using this website or voluntarily providing information to us, you acknowledge the
+                                practices described
+                                in this Privacy Policy.
+                            </p>
+                        </section>
+
+                        <section id="information" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">02</p>
+                            <h2 class="mt-3">Information we collect</h2>
+                            <p class="mt-5">Depending on how you interact with us, information may include:</p>
+                            <ul>
+                                <li>Name, contact details, email address and telephone number.</li>
+                                <li>Information voluntarily provided through consultation, enquiry, career or contact
+                                    forms.</li>
+                                <li>Information required to provide financial, investment, insurance or related
+                                    services.</li>
+                                <li>Technical information such as browser type, device information, IP address and
+                                    website usage data.</li>
+                                <li>Documents or other information supplied by you where required for onboarding,
+                                    verification or regulatory purposes.</li>
+                            </ul>
+                        </section>
+
+                        <section id="use" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">03</p>
+                            <h2 class="mt-3">How we use information</h2>
+                            <p class="mt-5">Information may be used to:</p>
+                            <ul>
+                                <li>Respond to enquiries and consultation requests.</li>
+                                <li>Provide, administer and improve our products and services.</li>
+                                <li>Complete onboarding, KYC, verification and other applicable compliance processes.
+                                </li>
+                                <li>Communicate important service, account, regulatory or administrative information.
+                                </li>
+                                <li>Understand website usage and improve our digital experience.</li>
+                                <li>Meet applicable legal, regulatory, audit, fraud-prevention and record-keeping
+                                    requirements.</li>
+                            </ul>
+                        </section>
+
+                        <section id="sharing" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">04</p>
+                            <h2 class="mt-3">Sharing &amp; disclosure</h2>
+                            <p class="mt-5">
+                                We do not sell personal information for advertising purposes. Information may be shared
+                                where reasonably
+                                necessary to provide requested services, operate our business, comply with applicable
+                                law or protect our
+                                rights and clients.
+                            </p>
+                            <p class="mt-4">
+                                This may include regulated financial institutions, technology or service providers,
+                                professional advisers,
+                                auditors, authorities and other parties where disclosure is legally required or
+                                appropriately authorised.
+                            </p>
+                        </section>
+
+                        <section id="security" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">05</p>
+                            <h2 class="mt-3">Data security</h2>
+                            <p class="mt-5">
+                                We take reasonable administrative, technical and organisational measures to protect
+                                information against
+                                unauthorised access, misuse, alteration, disclosure or destruction.
+                            </p>
+                            <p class="mt-4">
+                                However, no method of transmission or storage over the internet can be guaranteed to be
+                                completely secure.
+                                You should also take reasonable precautions when communicating sensitive information
+                                online.
+                            </p>
+                        </section>
+
+                        <section id="cookies" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">06</p>
+                            <h2 class="mt-3">Cookies &amp; website technologies</h2>
+                            <p class="mt-5">
+                                Our website may use cookies or similar technologies to support functionality, understand
+                                website traffic
+                                and improve user experience. You may be able to control cookies through your browser
+                                settings.
+                            </p>
+                        </section>
+
+                        <section id="rights" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">07</p>
+                            <h2 class="mt-3">Your rights &amp; choices</h2>
+                            <p class="mt-5">
+                                Subject to applicable law and regulatory requirements, you may request information about
+                                the personal data
+                                we hold about you, seek correction of inaccurate information, or raise a privacy-related
+                                concern.
+                            </p>
+                            <p class="mt-4">
+                                Certain information may need to be retained where required by law, regulation,
+                                contractual obligations,
+                                dispute resolution or legitimate record-keeping requirements.
+                            </p>
+                        </section>
+
+                        <section id="retention" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">08</p>
+                            <h2 class="mt-3">Data retention</h2>
+                            <p class="mt-5">
+                                We retain information only for as long as reasonably necessary for the purposes for
+                                which it was collected,
+                                or for periods required by applicable legal, regulatory, tax, accounting or business
+                                requirements.
+                            </p>
+                        </section>
+
+                        <section id="changes" class="policy-card rounded-3xl p-8 lg:p-10 reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">09</p>
+                            <h2 class="mt-3">Changes to this policy</h2>
+                            <p class="mt-5">
+                                We may update this Privacy Policy from time to time to reflect changes in our practices,
+                                services,
+                                technology or applicable requirements. The updated version will be posted on this page
+                                with a revised
+                                effective date.
+                            </p>
+                        </section>
+
+                        <section id="contact" class="rounded-3xl bg-navy p-8 lg:p-10 shadow-premium reveal">
+                            <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">10</p>
+                            <h2 class="font-heading font-bold text-3xl text-white mt-3">Questions about your privacy?
+                            </h2>
+                            <p class="text-white/60 mt-4 leading-relaxed">
+                                If you have a privacy-related question, request or concern, please contact our office.
+                            </p>
+                            <div class="grid sm:grid-cols-2 gap-5 mt-7">
+                                <div class="glass rounded-2xl p-5">
+                                    <p class="text-white/40 text-xs uppercase tracking-wider">Email</p>
+                                    <p class="text-white text-sm mt-2">aayushmanmoneymall@gmail.com</p>
+                                </div>
+                                <div class="glass rounded-2xl p-5">
+                                    <p class="text-white/40 text-xs uppercase tracking-wider">Phone</p>
+                                    <p class="text-white text-sm mt-2">+91 98261 15161</p>
+                                </div>
+                            </div>
+                            <a href="index.html#contact"
+                                class="inline-flex items-center gap-2 mt-7 bg-gold text-navy font-semibold px-6 py-3 rounded-full hover:bg-gold-600 transition">
+                                Contact Us <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </section>
+
+                        <p class="text-xs text-navy/40 px-2">
+                            Last updated: August 2026. This page is intended to describe website privacy practices and
+                            should be read
+                            together with applicable service terms, disclosures and regulatory requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+     <footer class="bg-navy text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid md:grid-cols-5 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center"><span
+                class="font-heading text-gold text-sm font-bold">A</span></div>
+            <span class="font-heading font-bold tracking-wide text-white text-lg">AAYUSHMAN</span>
+          </div>
+          <p class="text-white/45 text-sm mt-5 leading-relaxed max-w-sm">Premium wealth management and financial
+            planning for Indian families — helping you build, preserve and transfer wealth across generations.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://in.linkedin.com/in/aayushman-money-mall-130a2935a"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/aayushmanmoneymall/"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#who-we-are" class="hover:text-gold transition">About Us</a></li>
+            <li><a href="#team" class="hover:text-gold transition">Leadership</a></li>
+            <li><a href="#journey" class="hover:text-gold transition">Our Journey</a></li>
+            <li><a href="#knowledge" class="hover:text-gold transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Services</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#services" class="hover:text-gold transition">Mutual Funds</a></li>
+            <li><a href="#services" class="hover:text-gold transition">PMS &amp; AIF</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Retirement Planning</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Estate Planning</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Resources</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#calculators" class="hover:text-gold transition">Calculators</a></li>
+            <li><a href="knowledge-center.html" class="hover:text-gold transition">
+                Knowledge Center
+              </a></li>
+            <li><a href="https://www.ifaplanet.com/login.php" class="hover:text-gold transition">Client Login</a></li>
+            <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/10 mt-14 pt-8 flex flex-col lg:flex-row justify-between gap-4 text-white/35 text-xs leading-relaxed">
+        <p>&copy; 2026 Aayushman Financial Services Pvt. Ltd. All rights reserved. AMFI Registered Mutual Fund
+          Distributor, ARN-98765. SEBI Registered Investment Adviser, INA000012345.</p>
+        <div class="flex gap-6 shrink-0">
+          <a href="privacy-policy.html" class="hover:text-gold transition">
+            Privacy Policy
+          </a>
+
+          <a href="terms-of-use.html" class="hover:text-gold transition">
+            Terms of Use
+          </a>
+
+          <a href="disclosures.html" class="hover:text-gold transition">
+            Disclosures
+          </a>
+
+        </div>
+      </div>
+      <p class="text-white/25 text-[11px] mt-6 leading-relaxed">Mutual fund investments are subject to market risks.
+        Please read all scheme-related documents carefully before investing. Past performance is not indicative of
+        future returns.</p>
+    </div>
+  </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        document.querySelectorAll('#mobile-menu a').forEach(a => {
+            a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: .08 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

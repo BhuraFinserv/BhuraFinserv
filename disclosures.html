@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Disclosures | Aayushman Financial Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: "#0A1830", gold: "#C9A24B", offwhite: "#F7F7F4" },
+                    fontFamily: { heading: ["Georgia", "serif"], body: ["Inter", "Arial", "sans-serif"] },
+                    boxShadow: { premium: "0 20px 60px rgba(10,24,48,.10)", gold: "0 10px 30px rgba(201,162,75,.20)" }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #f7f7f4;
+            color: #0A1830
+        }
+
+        .font-heading {
+            font-family: Georgia, serif
+        }
+
+        .text-gold {
+            color: #C9A24B
+        }
+
+        .bg-gold {
+            background: #C9A24B
+        }
+
+        .bg-navy {
+            background: #0A1830
+        }
+
+        .prose-custom p {
+            color: rgba(10, 24, 48, .65);
+            line-height: 1.85;
+            margin-top: 1rem
+        }
+
+        .prose-custom h2 {
+            font-family: Georgia, serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-top: 2.5rem
+        }
+
+        .prose-custom h3 {
+            font-family: Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-top: 1.75rem
+        }
+
+        .prose-custom ul {
+            margin-top: 1rem;
+            padding-left: 1.25rem;
+            color: rgba(10, 24, 48, .65);
+            line-height: 1.85;
+            list-style: disc
+        }
+
+        .card {
+            background: white;
+            border: 1px solid rgba(10, 24, 48, .08);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: .3s
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 60px rgba(10, 24, 48, .10)
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- <header class="bg-navy text-white sticky top-0 z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-heading text-xl font-bold tracking-tight">Aayushman <span
+                    class="text-gold">Financial Services</span></a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm text-white/80">
+                <a href="index.html#who-we-are" class="hover:text-white">About</a>
+                <a href="index.html#services" class="hover:text-white">Services</a>
+                <a href="index.html#process" class="hover:text-white">Process</a>
+                <a href="knowledge-center.html" class="hover:text-white">Knowledge Center</a>
+                <a href="index.html#contact" class="hover:text-white">Contact</a>
+            </nav>
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://www.ifaplanet.com/login.php" class="text-sm text-white/80 hover:text-white">Client
+                    Login</a>
+                <a href="index.html#appointment"
+                    class="bg-gold text-navy font-semibold text-sm px-5 py-3 rounded-full">Book Consultation</a>
+            </div>
+            <button id="menu" class="lg:hidden text-2xl">☰</button>
+        </div>
+        <div id="mobile" class="hidden lg:hidden px-6 pb-6 space-y-4 text-white/80">
+            <a class="block" href="index.html#who-we-are">About</a><a class="block"
+                href="index.html#services">Services</a>
+            <a class="block" href="index.html#process">Process</a><a class="block"
+                href="knowledge-center.html">Knowledge Center</a>
+            <a class="block" href="index.html#contact">Contact</a><a class="block"
+                href="https://www.ifaplanet.com/login.php">Client Login</a>
+        </div>
+    </header> -->
+
+    <header class="bg-navy text-white sticky top-0 z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+                    <span class="inline-flex items-center">
+                        <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+                    </span>
+                </div>
+                <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA
+                    FINSERV</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+                <a href="index.html#who-we-are" class="text-white/90 hover:text-white transition">About</a>
+                <a href="index.html#services" class="text-white/90 hover:text-white transition">Services</a>
+                <a href="index.html#process" class="text-white/90 hover:text-white transition">Process</a>
+                <a href="index.html#knowledge" class="text-white/90 hover:text-white transition">Insights</a>
+                <a href="index.html#contact" class="text-white/90 hover:text-white transition">Contact</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://www.ifaplanet.com/login.php"
+                    class="text-sm font-medium text-white/90 hover:text-white transition">Client Login</a>
+                <a href="index.html#appointment"
+                    class="bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">
+                    Book Consultation
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-navy px-6 py-5">
+            <div class="flex flex-col gap-5 text-sm">
+                <a href="index.html#who-we-are" class="text-white/85">About</a>
+                <a href="index.html#services" class="text-white/85">Services</a>
+                <a href="index.html#process" class="text-white/85">Process</a>
+                <a href="index.html#knowledge" class="text-white/85">Insights</a>
+                <a href="index.html#contact" class="text-white/85">Contact</a>
+                <a href="https://www.ifaplanet.com/login.php" class="text-white/85">Client Login</a>
+                <a href="index.html#appointment"
+                    class="bg-gold text-navy font-semibold px-5 py-3 rounded-full text-center">Book Consultation</a>
+            </div>
+        </div>
+    </header>
+    <section class="bg-navy text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <p class="uppercase tracking-[.2em] text-gold text-xs font-semibold">Regulatory Information</p>
+            <h1 class="font-heading font-bold text-4xl lg:text-6xl mt-5">Disclosures</h1>
+            <p class="text-white/60 max-w-2xl mt-6 text-lg leading-relaxed">Important regulatory, investment-risk and
+                service-related disclosures for visitors and clients.</p>
+        </div>
+    </section>
+    <main class="max-w-5xl mx-auto px-6 lg:px-10 py-16">
+        <div class="prose-custom">
+            <p><strong>Last Updated:</strong> August 2026</p>
+            <div class="bg-gold/10 border border-gold/30 rounded-2xl p-6 mt-6">
+                <p class="!mt-0"><strong>Important:</strong> Replace the bracketed registration details below with the
+                    firm's verified, current regulatory information before publishing.</p>
+            </div>
+            <h2>1. Regulatory Details</h2>
+            <p><strong>Legal Name:</strong> Aayushman Financial Services Pvt. Ltd.</p>
+            <p><strong>Registered Office:</strong> Aayushman Money Mall, 1st floor, Arham Chambers, Motibagh Chowk,
+                Shastri Market, Raipur – 492001</p>
+            <p><strong>SEBI Registration:</strong> [INSERT VERIFIED SEBI REGISTRATION NUMBER AND CATEGORY]</p>
+            <p><strong>AMFI ARN:</strong> [INSERT VERIFIED ARN]</p>
+            <p>Only the services and registrations actually held by the firm should be represented on this website.</p>
+            <h2>2. Mutual Fund Risk Disclosure</h2>
+            <p>Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully
+                before investing. Past performance is not indicative of future returns.</p>
+            <h2>3. Investment Advisory Disclaimer</h2>
+            <p>Any advisory service, recommendation or investment-related communication is subject to the applicable
+                regulatory framework, client agreement, suitability requirements and disclosures. General educational
+                content on this website should not automatically be interpreted as personalised advice.</p>
+            <h2>4. PMS and AIF</h2>
+            <p>Portfolio Management Services and Alternative Investment Funds involve investment risks and may have
+                eligibility, minimum investment, liquidity and suitability requirements. Investors should review the
+                relevant offering documents and agreements before investing.</p>
+            <h2>5. Insurance</h2>
+            <p>Insurance products are subject to policy terms, conditions, exclusions and underwriting requirements.
+                Product suitability and claims are governed by the applicable policy documentation.</p>
+            <h2>6. Tax and Estate Planning</h2>
+            <p>Tax and estate-related information is provided for general educational purposes. Laws and individual
+                circumstances can differ. Specific legal, tax or succession matters should be evaluated with the
+                appropriate qualified professional.</p>
+            <h2>7. Performance and Projections</h2>
+            <p>Illustrations, calculators, projections or examples on this website are hypothetical and should not be
+                treated as a promise of future performance.</p>
+            <h2>8. Conflicts and Product Selection</h2>
+            <p>Where products or services are distributed or facilitated, applicable compensation arrangements and
+                conflicts should be evaluated in accordance with the relevant regulatory requirements and client
+                disclosures.</p>
+            <h2>9. Grievance and Client Support</h2>
+            <p>For service-related concerns, clients may first contact the firm through the official contact channels.
+                Applicable regulatory grievance mechanisms may also be available depending on the service and
+                registration involved.</p>
+            <h2>10. Contact</h2>
+            <p>Phone: +91 98261 15161 / +91 91310 17415<br>Email: aayushmanmoneymall@gmail.com</p>
+        </div>
+    </main>
+    <footer class="bg-navy text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid md:grid-cols-5 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center"><span
+                class="font-heading text-gold text-sm font-bold">A</span></div>
+            <span class="font-heading font-bold tracking-wide text-white text-lg">AAYUSHMAN</span>
+          </div>
+          <p class="text-white/45 text-sm mt-5 leading-relaxed max-w-sm">Premium wealth management and financial
+            planning for Indian families — helping you build, preserve and transfer wealth across generations.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://in.linkedin.com/in/aayushman-money-mall-130a2935a"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/aayushmanmoneymall/"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#who-we-are" class="hover:text-gold transition">About Us</a></li>
+            <li><a href="#team" class="hover:text-gold transition">Leadership</a></li>
+            <li><a href="#journey" class="hover:text-gold transition">Our Journey</a></li>
+            <li><a href="#knowledge" class="hover:text-gold transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Services</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#services" class="hover:text-gold transition">Mutual Funds</a></li>
+            <li><a href="#services" class="hover:text-gold transition">PMS &amp; AIF</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Retirement Planning</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Estate Planning</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Resources</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="#calculators" class="hover:text-gold transition">Calculators</a></li>
+            <li><a href="knowledge-center.html" class="hover:text-gold transition">
+                Knowledge Center
+              </a></li>
+            <li><a href="https://www.ifaplanet.com/login.php" class="hover:text-gold transition">Client Login</a></li>
+            <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/10 mt-14 pt-8 flex flex-col lg:flex-row justify-between gap-4 text-white/35 text-xs leading-relaxed">
+        <p>&copy; 2026 Aayushman Financial Services Pvt. Ltd. All rights reserved. AMFI Registered Mutual Fund
+          Distributor, ARN-98765. SEBI Registered Investment Adviser, INA000012345.</p>
+        <div class="flex gap-6 shrink-0">
+          <a href="privacy-policy.html" class="hover:text-gold transition">
+            Privacy Policy
+          </a>
+
+          <a href="terms-of-use.html" class="hover:text-gold transition">
+            Terms of Use
+          </a>
+
+          <a href="disclosures.html" class="hover:text-gold transition">
+            Disclosures
+          </a>
+
+        </div>
+      </div>
+      <p class="text-white/25 text-[11px] mt-6 leading-relaxed">Mutual fund investments are subject to market risks.
+        Please read all scheme-related documents carefully before investing. Past performance is not indicative of
+        future returns.</p>
+    </div>
+  </footer>
+    <script>document.getElementById('menu')?.addEventListener('click', () => document.getElementById('mobile').classList.toggle('hidden'));</script>
+</body>
+
+</html>
