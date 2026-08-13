@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asset Allocation: The Architecture Behind Long-Term Wealth | Aayushman Financial Services</title>
+
+    <meta name="description"
+        content="A practical guide to asset allocation and how Indian investors can build portfolios designed for long-term wealth creation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A1830',
+                            50: '#EEF1F6',
+                            100: '#D6DEEA',
+                            200: '#AEBDD5',
+                            300: '#8598BC',
+                            400: '#5C74A0',
+                            500: '#3A517F',
+                            600: '#243863',
+                            700: '#152647',
+                            800: '#0F1C36',
+                            900: '#0A1830',
+                            950: '#060E1D'
+                        },
+                        gold: {
+                            DEFAULT: '#C9A24B',
+                            50: '#FBF6EA',
+                            100: '#F4E7C6',
+                            200: '#EAD49A',
+                            300: '#DFC06D',
+                            400: '#D5B056',
+                            500: '#C9A24B',
+                            600: '#AB853A',
+                            700: '#87682E'
+                        },
+                        offwhite: '#F7F8FA'
+                    },
+
+                    fontFamily: {
+                        heading: ['Manrope', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+
+                    boxShadow: {
+                        premium: '0 20px 60px -15px rgba(10,24,48,.20)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F7F8FA;
+            color: #0A1830;
+        }
+
+        .font-heading {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            backdrop-filter: blur(14px);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(110deg,
+                    #E7CA7A,
+                    #C9A24B,
+                    #F0D895);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .article p {
+            color: rgba(10, 24, 48, .68);
+            line-height: 1.9;
+            font-size: 1.02rem;
+        }
+
+        .article h2 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            line-height: 1.25;
+            margin-top: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: .7rem;
+        }
+
+        .article ul {
+            margin-top: 1rem;
+            padding-left: 1.3rem;
+        }
+
+        .article li {
+            color: rgba(10, 24, 48, .65);
+            margin: .65rem 0;
+            line-height: 1.7;
+        }
+
+        .article li::marker {
+            color: #C9A24B;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media(max-width:640px) {
+
+            .article h2 {
+                font-size: 1.45rem;
+                margin-top: 2.5rem;
+            }
+
+            .article p {
+                font-size: .96rem;
+                line-height: 1.8;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+                    <span class="inline-flex items-center">
+                        <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+                    </span>
+                </div>
+                <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA
+                    FINSERV</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+                <a href="../index.html#who-we-are" class="text-white/90 hover:text-white transition">About</a>
+                <a href="../index.html#services" class="text-white/90 hover:text-white transition">Services</a>
+                <a href="../index.html#process" class="text-white/90 hover:text-white transition">Process</a>
+                <a href="../index.html#knowledge" class="text-white/90 hover:text-white transition">Insights</a>
+                <a href="../index.html#contact" class="text-white/90 hover:text-white transition">Contact</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://www.ifaplanet.com/login.php"
+                    class="text-sm font-medium text-white/90 hover:text-white transition">Client Login</a>
+                <a href="../index.html#appointment"
+                    class="bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">
+                    Book Consultation
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-navy px-6 py-5">
+            <div class="flex flex-col gap-5 text-sm">
+                <a href="../index.html#who-we-are" class="text-white/85">About</a>
+                <a href="../index.html#services" class="text-white/85">Services</a>
+                <a href="../index.html#process" class="text-white/85">Process</a>
+                <a href="../index.html#knowledge" class="text-white/85">Insights</a>
+                <a href="../index.html#contact" class="text-white/85">Contact</a>
+                <a href="https://www.ifaplanet.com/login.php" class="text-white/85">Client Login</a>
+                <a href="../index.html#appointment"
+                    class="bg-gold text-navy font-semibold px-5 py-3 rounded-full text-center">Book Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-navy-950 translate-x-full transition-transform duration-500 lg:hidden">
+        <div class="flex justify-between items-center px-6 py-6">
+            <span class="font-heading font-bold text-gold text-lg tracking-wide">BHURA FINSERV</span>
+            <button id="mobile-menu-close" class="text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 px-8 mt-10 font-heading text-2xl text-white">
+            <a href="#who-we-are" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#process" class="mobile-link">Process</a>
+            <a href="#knowledge" class="mobile-link">Insights</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#appointment"
+                class="mt-6 inline-block bg-gold text-navy text-center font-semibold text-base px-6 py-4 rounded-full">Book
+                Consultation</a>
+        </div>
+    </div>
+
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="relative bg-navy pt-20 overflow-hidden">
+
+            <div class="absolute top-0 right-0
+        w-[500px] h-[500px]
+        bg-gold/10 rounded-full blur-[140px]">
+            </div>
+
+            <div class="absolute bottom-0 left-0
+        w-[350px] h-[350px]
+        bg-white/5 rounded-full blur-[120px]">
+            </div>
+
+            <div class="max-w-5xl mx-auto
+        px-6 lg:px-10
+        py-20 lg:py-28
+        relative">
+
+                <div class="max-w-4xl reveal">
+
+                    <div class="flex items-center gap-3 mb-7">
+
+                        <span class="text-gold text-xs
+              font-bold tracking-[.25em] uppercase">
+                            INSIGHTS
+                        </span>
+
+                        <span class="w-8 h-px bg-gold/50"></span>
+
+                        <span class="text-white/40 text-xs">
+                            Wealth Strategy
+                        </span>
+
+                    </div>
+
+                    <h1 class="font-heading font-extrabold
+            text-white
+            text-4xl sm:text-5xl lg:text-7xl
+            leading-[1.05]">
+
+                        Asset Allocation:
+                        <span class="gold-gradient">
+                            The Architecture
+                        </span>
+                        Behind Wealth
+
+                    </h1>
+
+                    <p class="text-white/60
+            text-lg lg:text-xl
+            max-w-3xl
+            mt-7
+            leading-relaxed">
+
+                        The best portfolio isn't the one with the
+                        highest-returning investment. It's the one
+                        built to survive every market cycle.
+
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 mt-8">
+
+                        <span class="glass rounded-full
+              px-4 py-2 text-white/60 text-xs">
+                            8 min read
+                        </span>
+
+                        <span class="glass rounded-full
+              px-4 py-2 text-white/60 text-xs">
+                            August 2026
+                        </span>
+
+                        <span class="glass rounded-full
+              px-4 py-2 text-white/60 text-xs">
+                            Investment Strategy
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARTICLE -->
+
+        <section class="py-12 lg:py-20">
+
+            <div class="max-w-6xl mx-auto
+        px-6 lg:px-10">
+
+                <div class="grid lg:grid-cols-[1fr_300px]
+          gap-10 lg:gap-16">
+
+                    <!-- ARTICLE -->
+
+                    <article class="article bg-white
+            rounded-3xl
+            border border-navy/8
+            shadow-premium
+            p-7 sm:p-10 lg:p-14">
+
+                        <!-- KEY TAKEAWAY -->
+
+                       <div
+                            class="relative rounded-3xl overflow-hidden
+                            mb-12">
+
+                            <img
+                                src="/asset/blogs/asset-allocation.webp"
+                                alt="Sensex Nifty and Global Market Update"
+                                class="market-image
+                                aspect-[16/8]
+                                object-cover">
+
+                        </div>
+
+
+
+                        <p>
+                            When markets are rising, almost every
+                            investment strategy looks intelligent.
+                            The real test comes when markets fall,
+                            inflation rises, or life changes unexpectedly.
+                        </p>
+
+                        <p class="mt-6">
+                            This is where asset allocation becomes
+                            more important than individual investment
+                            selection.
+                        </p>
+
+
+                        <h2>
+                            01. What is asset allocation?
+                        </h2>
+
+                        <p>
+                            Asset allocation is the process of deciding
+                            how your wealth should be distributed across
+                            different asset classes such as equities,
+                            fixed income, gold, real estate and cash.
+                        </p>
+
+                        <div class="grid sm:grid-cols-3 gap-4 my-10">
+
+                            <div class="rounded-2xl bg-offwhite p-6">
+                                <p class="text-gold text-2xl font-bold">
+                                    Equity
+                                </p>
+                                <p class="text-navy/50 text-sm mt-2">
+                                    Growth engine
+                                </p>
+                            </div>
+
+                            <div class="rounded-2xl bg-offwhite p-6">
+                                <p class="text-gold text-2xl font-bold">
+                                    Debt
+                                </p>
+                                <p class="text-navy/50 text-sm mt-2">
+                                    Stability
+                                </p>
+                            </div>
+
+                            <div class="rounded-2xl bg-offwhite p-6">
+                                <p class="text-gold text-2xl font-bold">
+                                    Gold
+                                </p>
+                                <p class="text-navy/50 text-sm mt-2">
+                                    Diversification
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            02. Why diversification matters
+                        </h2>
+
+                        <p>
+                            Different assets behave differently under
+                            different economic conditions. A well-designed
+                            portfolio therefore doesn't depend on one
+                            asset class doing everything right.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Reduce dependence on a single investment.
+                            </li>
+
+                            <li>
+                                Create greater portfolio resilience.
+                            </li>
+
+                            <li>
+                                Match risk with your actual goals.
+                            </li>
+
+                            <li>
+                                Maintain liquidity for important life events.
+                            </li>
+
+                        </ul>
+
+
+                        <h2>
+                            03. Your allocation should follow your goals
+                        </h2>
+
+                        <p>
+                            A 30-year-old accumulating wealth and a
+                            65-year-old drawing retirement income should
+                            not necessarily have the same portfolio.
+                        </p>
+
+                        <div class="my-10
+              border-l-4 border-gold
+              bg-gold/5
+              rounded-r-2xl
+              p-6">
+
+                            <p class="!text-navy
+                !font-medium
+                !leading-relaxed">
+
+                                "The right portfolio is not the portfolio
+                                with the highest possible return. It is the
+                                portfolio whose risk you can stay invested
+                                through."
+
+                            </p>
+
+                        </div>
+
+
+                        <h2>
+                            04. The role of discipline
+                        </h2>
+
+                        <p>
+                            Asset allocation only works when investors
+                            actually follow it. During a bull market,
+                            investors often want more equity. During a
+                            correction, they want less.
+                        </p>
+
+                        <p class="mt-6">
+                            This emotional cycle can quietly destroy
+                            long-term returns.
+                        </p>
+
+
+                        <!-- WHAT THIS MEANS -->
+
+                        <div class="mt-12 rounded-3xl
+              bg-navy p-8 sm:p-10">
+
+                            <p class="text-gold text-xs
+                font-bold tracking-[.18em] uppercase">
+                                What this means for you
+                            </p>
+
+                            <h2 class="!text-white !mt-3">
+                                Build the portfolio
+                                you can stay with.
+                            </h2>
+
+                            <p class="!text-white/60">
+                                Your asset allocation should reflect
+                                your goals, time horizon, risk capacity,
+                                liquidity requirements and family
+                                responsibilities.
+                            </p>
+
+                            <a href="index.html#appointment" class="inline-flex items-center gap-3
+                bg-gold text-navy
+                font-semibold
+                px-6 py-3
+                rounded-full
+                mt-6
+                hover:bg-gold-300 transition">
+
+                                Discuss Your Portfolio
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SIDEBAR -->
+
+                    <aside class="hidden lg:block">
+
+                        <div class="sticky top-28">
+
+                            <p class="text-xs font-bold
+                tracking-[.18em]
+                text-gold uppercase mb-5">
+                                In this article
+                            </p>
+
+                            <div class="space-y-3
+                border-l border-navy/10 pl-5">
+
+                                <a href="#" class="block text-sm
+                  text-navy/60
+                  hover:text-gold transition">
+                                    What is asset allocation?
+                                </a>
+
+                                <a href="#" class="block text-sm
+                  text-navy/60
+                  hover:text-gold transition">
+                                    Why diversification matters
+                                </a>
+
+                                <a href="#" class="block text-sm
+                  text-navy/60
+                  hover:text-gold transition">
+                                    Goals & allocation
+                                </a>
+
+                                <a href="#" class="block text-sm
+                  text-navy/60
+                  hover:text-gold transition">
+                                    The role of discipline
+                                </a>
+
+                            </div>
+
+
+                            <div class="mt-10
+                rounded-3xl
+                bg-navy
+                p-6">
+
+                                <p class="text-white
+                  font-heading font-bold">
+                                    Build wealth
+                                    with intention.
+                                </p>
+
+                                <p class="text-white/50
+                  text-xs mt-3
+                  leading-relaxed">
+                                    Talk to our team about
+                                    building a long-term
+                                    wealth strategy.
+                                </p>
+
+                                <a href="index.html#appointment" class="text-gold text-sm
+                  font-semibold
+                  inline-flex items-center
+                  gap-2 mt-5">
+                                    Book a consultation
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <div id="footer-component"></div>
+
+    <script src="../js/components.js"></script>
+
+    <script>
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add('visible');
+
+                        }
+
+                    });
+
+                },
+                { threshold: .1 }
+            );
+
+        document
+            .querySelectorAll('.reveal')
+            .forEach(el => observer.observe(el));
+
+    </script>
+
+</body>
+
+</html>

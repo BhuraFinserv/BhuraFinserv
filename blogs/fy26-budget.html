@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Asset Allocation: The Architecture Behind Long-Term Wealth | Aayushman Financial Services</title>
+
+  <meta name="description"
+    content="A practical guide to asset allocation and how Indian investors can build portfolios designed for long-term wealth creation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0A1830',
+              50: '#EEF1F6',
+              100: '#D6DEEA',
+              200: '#AEBDD5',
+              300: '#8598BC',
+              400: '#5C74A0',
+              500: '#3A517F',
+              600: '#243863',
+              700: '#152647',
+              800: '#0F1C36',
+              900: '#0A1830',
+              950: '#060E1D'
+            },
+            gold: {
+              DEFAULT: '#C9A24B',
+              50: '#FBF6EA',
+              100: '#F4E7C6',
+              200: '#EAD49A',
+              300: '#DFC06D',
+              400: '#D5B056',
+              500: '#C9A24B',
+              600: '#AB853A',
+              700: '#87682E'
+            },
+            offwhite: '#F7F8FA'
+          },
+
+          fontFamily: {
+            heading: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+
+          boxShadow: {
+            premium: '0 20px 60px -15px rgba(10,24,48,.20)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F7F8FA;
+      color: #0A1830;
+    }
+
+    .font-heading {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .10);
+      backdrop-filter: blur(14px);
+    }
+
+    .gold-gradient {
+      background: linear-gradient(110deg,
+          #E7CA7A,
+          #C9A24B,
+          #F0D895);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .article p {
+      color: rgba(10, 24, 48, .68);
+      line-height: 1.9;
+      font-size: 1.02rem;
+    }
+
+    .article h2 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      line-height: 1.25;
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .article h3 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: .7rem;
+    }
+
+    .article ul {
+      margin-top: 1rem;
+      padding-left: 1.3rem;
+    }
+
+    .article li {
+      color: rgba(10, 24, 48, .65);
+      margin: .65rem 0;
+      line-height: 1.7;
+    }
+
+    .article li::marker {
+      color: #C9A24B;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media(max-width:640px) {
+
+      .article h2 {
+        font-size: 1.45rem;
+        margin-top: 2.5rem;
+      }
+
+      .article p {
+        font-size: .96rem;
+        line-height: 1.8;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+          <span class="inline-flex items-center">
+            <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+          </span>
+        </div>
+        <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA
+          FINSERV</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+        <a href="../index.html#who-we-are" class="text-white/90 hover:text-white transition">About</a>
+        <a href="../index.html#services" class="text-white/90 hover:text-white transition">Services</a>
+        <a href="../index.html#process" class="text-white/90 hover:text-white transition">Process</a>
+        <a href="../index.html#knowledge" class="text-white/90 hover:text-white transition">Insights</a>
+        <a href="../index.html#contact" class="text-white/90 hover:text-white transition">Contact</a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="https://www.ifaplanet.com/login.php"
+          class="text-sm font-medium text-white/90 hover:text-white transition">Client Login</a>
+        <a href="../index.html#appointment"
+          class="bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">
+          Book Consultation
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-navy px-6 py-5">
+      <div class="flex flex-col gap-5 text-sm">
+        <a href="../index.html#who-we-are" class="text-white/85">About</a>
+        <a href="../index.html#services" class="text-white/85">Services</a>
+        <a href="../index.html#process" class="text-white/85">Process</a>
+        <a href="../index.html#knowledge" class="text-white/85">Insights</a>
+        <a href="../index.html#contact" class="text-white/85">Contact</a>
+        <a href="https://www.ifaplanet.com/login.php" class="text-white/85">Client Login</a>
+        <a href="../index.html#appointment"
+          class="bg-gold text-navy font-semibold px-5 py-3 rounded-full text-center">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative bg-navy pt-20 overflow-hidden">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[140px]"></div>
+      <div class="absolute bottom-0 left-0 w-[350px] h-[350px] bg-white/5 rounded-full blur-[120px]"></div>
+
+      <div class="max-w-5xl mx-auto px-6 lg:px-10 py-20 lg:py-28 relative">
+        <div class="max-w-4xl reveal">
+
+          <div class="flex items-center gap-3 mb-7">
+            <span class="text-gold text-xs font-bold tracking-[.25em] uppercase">
+              INSIGHTS
+            </span>
+            <span class="w-8 h-px bg-gold/50"></span>
+            <span class="text-white/40 text-xs">
+              Budget &amp; Tax
+            </span>
+          </div>
+
+          <h1 class="font-heading font-extrabold text-white text-4xl sm:text-5xl lg:text-7xl leading-[1.05]">
+            Union Budget FY26:
+            <span class="gold-gradient">
+              What It Meant
+            </span>
+            for Investors
+          </h1>
+
+          <p class="text-white/60 text-lg lg:text-xl max-w-3xl mt-7 leading-relaxed">
+            Union Budget 2025–26 placed significant emphasis on household purchasing power,
+            investment and tax relief. Here is what investors should remember beyond the headlines.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="glass rounded-full px-4 py-2 text-white/60 text-xs">6–8 min read</span>
+            <span class="glass rounded-full px-4 py-2 text-white/60 text-xs">August 2026</span>
+            <span class="glass rounded-full px-4 py-2 text-white/60 text-xs">Budget &amp; Tax</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section class="py-12 lg:py-20">
+      <div class="max-w-6xl mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-[1fr_300px] gap-10 lg:gap-16">
+
+          <article class="article bg-white rounded-3xl border border-navy/8 shadow-premium p-7 sm:p-10 lg:p-14">
+
+            <!-- KEY TAKEAWAY -->
+            <div class="relative rounded-3xl overflow-hidden mb-10 min-h-[320px]">
+
+              <!-- Full Background Image -->
+              <img src="/asset/blogs/FY26-Budget.webp" alt="Retirement Planning"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            </div>
+
+
+            <p>The Union Budget for FY2025–26 was presented on 1 February 2025. For investors, one of its most
+              visible changes was personal income tax, while the broader budget also focused on growth,
+              infrastructure, agriculture, manufacturing and household demand.</p>
+            <h2 id="headline-tax">The headline change: personal income tax</h2>
+            <p>The Budget proposed a revised personal income-tax structure under the new regime. It stated that
+              there would be no income tax payable up to total income of ₹12 lakh, excluding income taxed at
+              special rates such as certain capital gains; for salaried taxpayers, the effective threshold was
+              ₹12.75 lakh after the ₹75,000 standard deduction.</p>
+            <p>The revised slabs were: up to ₹4 lakh nil; ₹4–8 lakh at 5%; ₹8–12 lakh at 10%; ₹12–16 lakh at
+              15%; ₹16–20 lakh at 20%; ₹20–24 lakh at 25%; and above ₹24 lakh at 30%.</p>
+            <div class="my-10 border-l-4 border-gold bg-gold/5 rounded-r-2xl p-6">The important investment lesson was
+              not simply “lower tax”. It was what investors
+              chose to do with the cash-flow improvement.</div>
+            <h2 id="wealth-building">Tax relief can become a wealth-building opportunity</h2>
+            <p>For a household that sees a lower tax outgo, the long-term benefit depends on what happens next.
+              Extra cash can be consumed, held idle, used to reduce expensive debt or directed toward
+              long-term investments.</p>
+            <h2 id="capital-gains">Capital gains remain a separate consideration</h2>
+            <p>The ₹12 lakh threshold did not mean every type of income becomes tax-free at that level. The
+              Budget speech specifically excluded special-rate income such as capital gains from the statement
+              about no income tax up to ₹12 lakh.</p>
+            <p>This distinction matters for investors who receive salary or business income alongside capital
+              gains. Portfolio decisions should consider both ordinary income and investment-gain taxation.
+            </p>
+            <h2 id="portfolio-decisions">What the Budget means for portfolio decisions</h2>
+            <ul>
+              <li>Review whether your tax regime is appropriate for your circumstances.</li>
+              <li>Direct sustainable savings toward clearly defined financial goals.</li>
+              <li>Do not increase investment risk simply because disposable income has increased.</li>
+              <li>Review emergency reserves, protection and expensive debt before increasing market exposure.
+              </li>
+              <li>Keep tax planning separate from product selection.</li>
+            </ul>
+            <h2>Beyond income tax</h2>
+            <p>The FY26 Budget also addressed infrastructure, agriculture, manufacturing, small businesses and
+              investment-related measures. It proposed tax certainty for certain Category I and II AIFs
+              investing in securities and extended the investment window for sovereign wealth and pension
+              funds investing in infrastructure.</p>
+            <div class="mt-12 rounded-3xl bg-navy p-8 sm:p-10 text-white"><strong>A better way to read a
+                Budget:</strong>
+              <p>Ask “What changes for my cash flow, taxes, goals and portfolio?” rather than “Which stock
+                will benefit tomorrow?”</p>
+            </div>
+            <h2 id="bottom-line">The bottom line</h2>
+            <p>The FY26 Budget created meaningful changes for individual taxpayers, particularly under the new
+              tax regime. The wealth-building opportunity comes from turning policy changes into better
+              financial behaviour: saving deliberately, investing consistently, managing taxes intelligently
+              and staying aligned with long-term goals.</p>
+            <div class="mt-12 pt-6 border-t border-navy/10 text-navy/45 text-xs leading-relaxed"><b>Sources &amp;
+                further reading</b><br><a href="https://www.indiabudget.gov.in/budget2025-26/" target="_blank"
+                rel="noopener">Union
+                Budget 2025–26 – Ministry of Finance</a><br><a
+                href="https://www.indiabudget.gov.in/budget2025-26/doc/Budget_Speech.pdf" target="_blank"
+                rel="noopener">Budget Speech 2025–26</a>
+              <p>This article is for education and general information only. It is not a recommendation to buy
+                or sell any security or financial product. Tax rules, market conditions and regulations may
+                change.</p>
+            </div>
+
+
+            <!-- CLOSING CTA -->
+            <div class="mt-12 rounded-3xl bg-navy p-8 sm:p-10">
+              <p class="text-gold text-xs font-bold tracking-[.18em] uppercase">
+                Our perspective
+              </p>
+
+              <h2 class="!text-white !mt-3">
+                Turn policy changes into better financial decisions.
+              </h2>
+
+              <p class="!text-white/60">
+                Tax rules can change, but the principles of disciplined wealth creation remain.
+                Review your cash flow, goals, tax position and portfolio together rather than in isolation.
+              </p>
+
+              <a href="../index.html#appointment"
+                class="inline-flex items-center gap-3 bg-gold text-navy font-semibold px-6 py-3 rounded-full mt-6 hover:bg-gold-300 transition">
+                Discuss Your Portfolio
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+          </article>
+
+          <!-- SIDEBAR -->
+          <aside class="hidden lg:block">
+            <div class="sticky top-28">
+
+              <p class="text-xs font-bold tracking-[.18em] text-gold uppercase mb-5">
+                In this article
+              </p>
+
+              <div class="space-y-3 border-l border-navy/10 pl-5">
+                <a href="#headline-tax" class="block text-sm text-navy/60 hover:text-gold transition">
+                  The headline tax change
+                </a>
+                <a href="#wealth-building" class="block text-sm text-navy/60 hover:text-gold transition">
+                  Tax relief &amp; wealth building
+                </a>
+                <a href="#capital-gains" class="block text-sm text-navy/60 hover:text-gold transition">
+                  Capital gains
+                </a>
+                <a href="#portfolio-decisions" class="block text-sm text-navy/60 hover:text-gold transition">
+                  Portfolio decisions
+                </a>
+                <a href="#bottom-line" class="block text-sm text-navy/60 hover:text-gold transition">
+                  The bottom line
+                </a>
+              </div>
+
+              <div class="mt-10 rounded-3xl bg-navy p-6">
+                <p class="text-white font-heading font-bold">
+                  Read the Budget with a long-term lens.
+                </p>
+
+                <p class="text-white/50 text-xs mt-3 leading-relaxed">
+                  The right question is not which investment benefits tomorrow,
+                  but what changes for your cash flow, taxes and goals.
+                </p>
+
+                <a href="../index.html#appointment"
+                  class="text-gold text-sm font-semibold inline-flex items-center gap-2 mt-5">
+                  Book a consultation
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid md:grid-cols-5 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center"><span
+                class="font-heading text-gold text-sm font-bold">A</span></div>
+            <span class="font-heading font-bold tracking-wide text-white text-lg">AAYUSHMAN</span>
+          </div>
+          <p class="text-white/45 text-sm mt-5 leading-relaxed max-w-sm">Premium wealth management and financial
+            planning for Indian families — helping you build, preserve and transfer wealth across generations.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://in.linkedin.com/in/aayushman-money-mall-130a2935a"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/aayushmanmoneymall/"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="../index.html#who-we-are" class="hover:text-gold transition">About Us</a></li>
+            <li><a href="../index.html#team" class="hover:text-gold transition">Leadership</a></li>
+            <li><a href="../index.html#journey" class="hover:text-gold transition">Our Journey</a></li>
+            <li><a href="../index.html#knowledge" class="hover:text-gold transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Services</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="../index.html#services" class="hover:text-gold transition">Mutual Funds</a></li>
+            <li><a href="../index.html#services" class="hover:text-gold transition">PMS &amp; AIF</a></li>
+            <li><a href="../index.html#services" class="hover:text-gold transition">Retirement Planning</a></li>
+            <li><a href="../index.html#services" class="hover:text-gold transition">Estate Planning</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-heading font-semibold text-white text-sm mb-4">Resources</p>
+          <ul class="space-y-3 text-white/45 text-sm">
+            <li><a href="../index.html#calculators" class="hover:text-gold transition">Calculators</a></li>
+            <li><a href="../index.html#knowledge" class="hover:text-gold transition">
+                Knowledge Center
+              </a></li>
+            <li><a href="https://www.ifaplanet.com/login.php" class="hover:text-gold transition">Client Login</a></li>
+            <li><a href="../index.html#contact" class="hover:text-gold transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/10 mt-14 pt-8 flex flex-col lg:flex-row justify-between gap-4 text-white/35 text-xs leading-relaxed">
+        <p>&copy; 2026 Aayushman Financial Services Pvt. Ltd. All rights reserved. AMFI Registered Mutual Fund
+          Distributor, ARN-98765. SEBI Registered Investment Adviser, INA000012345.</p>
+        <div class="flex gap-6 shrink-0">
+          <a href="../privacy-policy.html" class="hover:text-gold transition">
+            Privacy Policy
+          </a>
+
+          <a href="../terms-of-use.html" class="hover:text-gold transition">
+            Terms of Use
+          </a>
+
+          <a href="../disclosures.html" class="hover:text-gold transition">
+            Disclosures
+          </a>
+
+        </div>
+      </div>
+      <p class="text-white/25 text-[11px] mt-6 leading-relaxed">Mutual fund investments are subject to market risks.
+        Please read all scheme-related documents carefully before investing. Past performance is not indicative of
+        future returns.</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      },
+      { threshold: .1 }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Mobile menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+
+</html>

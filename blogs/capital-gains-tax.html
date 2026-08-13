@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Capital Gains Tax in India: What Investors Should Understand Before They Sell | Aayushman Financial Services</title>
+
+    <meta name="description"
+        content="Capital gains are not simply about the profit you see on a statement. The tax treatment depends on the asset, holding period, transaction and applicable provisions.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A1830',
+                            950: '#071224',
+                            900: '#09172C',
+                            800: '#0B1C38',
+                            700: '#102646'
+                        },
+                        gold: {
+                            DEFAULT: '#C9A24B',
+                            600: '#B58D3B'
+                        },
+                        offwhite: '#F7F8FA'
+                    },
+                    fontFamily: {
+                        heading: ['Manrope', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        gold: '0 10px 30px rgba(201,162,75,.18)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --navy: #0A1830;
+            --navy-dark: #071224;
+            --gold: #C9A24B;
+            --offwhite: #F7F8FA;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--offwhite);
+            color: var(--navy);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(
+                110deg,
+                #E7CA7A,
+                #C9A24B,
+                #F0D895
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* =========================
+           ARTICLE HERO
+        ========================= */
+
+        .article-hero {
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(201, 162, 75, .16),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0A1830,
+                    #071224
+                );
+        }
+
+        .article-content p {
+            color: rgba(10, 24, 48, .68);
+            line-height: 1.9;
+            font-size: 1.02rem;
+        }
+
+        .article-content h2 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            line-height: 1.25;
+            margin-top: 3.5rem;
+            margin-bottom: 1rem;
+            color: #0A1830;
+        }
+
+        .article-content h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: .7rem;
+            color: #0A1830;
+        }
+
+        .article-content ul {
+            margin-top: 1rem;
+            padding-left: 1.3rem;
+        }
+
+        .article-content li {
+            color: rgba(10, 24, 48, .65);
+            margin: .65rem 0;
+            line-height: 1.7;
+        }
+
+        .article-content li::marker {
+            color: #C9A24B;
+        }
+
+        .article-quote {
+            border-left: 3px solid #C9A24B;
+            background: #FBF8F1;
+            padding: 22px 24px;
+            margin: 32px 0;
+            border-radius: 0 16px 16px 0;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            line-height: 1.55;
+            color: #0A1830;
+        }
+
+        .article-callout {
+            background: #0A1830;
+            border-radius: 20px;
+            padding: 26px;
+            margin: 34px 0;
+            color: white;
+        }
+
+        .article-callout strong {
+            color: #E2C98F;
+        }
+
+        .article-callout p {
+            color: rgba(255, 255, 255, .68);
+            margin: 8px 0 0;
+        }
+
+        .article-sources {
+            border-top: 1px solid #E6E2DA;
+            margin-top: 45px;
+            padding-top: 20px;
+            color: #7B8492;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .article-sources a {
+            color: #8D6A2D;
+            text-decoration: underline;
+        }
+
+        .article-side-card {
+            background: #F7F4EE;
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 15px;
+        }
+
+        .article-side-card b {
+            font-size: 10px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: #A37B31;
+        }
+
+        .article-side-card p {
+            font-size: 13px;
+            line-height: 1.65;
+            color: #667085;
+            margin-top: 8px;
+        }
+
+        /* Reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media(max-width: 640px) {
+
+            .article-content h2 {
+                font-size: 1.45rem;
+                margin-top: 2.5rem;
+            }
+
+            .article-content p {
+                font-size: .96rem;
+                line-height: 1.8;
+            }
+
+            .article-quote {
+                font-size: 18px;
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center gap-3">
+
+                <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+
+                    <img src="../asset/logo.jpg"
+                        alt="Aayushman Financial Services"
+                        class="h-10 w-10 object-contain">
+
+                </div>
+
+                <span class="font-heading font-bold tracking-wide text-white text-lg">
+                    BHURA FINSERV
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+
+                <a href="../index.html#who-we-are"
+                    class="text-white/90 hover:text-gold transition">
+                    About
+                </a>
+
+                <a href="../index.html#services"
+                    class="text-white/90 hover:text-gold transition">
+                    Services
+                </a>
+
+                <a href="../index.html#process"
+                    class="text-white/90 hover:text-gold transition">
+                    Process
+                </a>
+
+                <a href="../index.html#knowledge"
+                    class="text-white/90 hover:text-gold transition">
+                    Insights
+                </a>
+
+                <a href="../index.html#contact"
+                    class="text-white/90 hover:text-gold transition">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Desktop CTA -->
+            <div class="hidden lg:flex items-center gap-4">
+
+                <a href="https://www.ifaplanet.com/login.php"
+                    class="text-sm font-medium text-white/90 hover:text-gold transition">
+                    Client Login
+                </a>
+
+                <a href="../index.html#appointment"
+                    class="bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">
+                    Book Consultation
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-white text-2xl"
+                aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden border-t border-white/10 bg-navy px-6 py-5">
+
+            <div class="flex flex-col gap-5 text-sm">
+
+                <a href="../index.html#who-we-are"
+                    class="text-white/85 hover:text-gold transition">
+                    About
+                </a>
+
+                <a href="../index.html#services"
+                    class="text-white/85 hover:text-gold transition">
+                    Services
+                </a>
+
+                <a href="../index.html#process"
+                    class="text-white/85 hover:text-gold transition">
+                    Process
+                </a>
+
+                <a href="../index.html#knowledge"
+                    class="text-white/85 hover:text-gold transition">
+                    Insights
+                </a>
+
+                <a href="../index.html#contact"
+                    class="text-white/85 hover:text-gold transition">
+                    Contact
+                </a>
+
+                <a href="https://www.ifaplanet.com/login.php"
+                    class="text-white/85 hover:text-gold transition">
+                    Client Login
+                </a>
+
+                <a href="../index.html#appointment"
+                    class="bg-gold text-navy font-semibold px-5 py-3 rounded-full text-center">
+                    Book Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="article-hero text-white pt-40 pb-28 px-6">
+
+        <div class="max-w-5xl mx-auto">
+
+            <p class="text-gold uppercase tracking-[.22em] text-xs font-bold">
+                Tax & Wealth
+            </p>
+
+            <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mt-5">
+                Capital Gains Tax in India:
+                <span class="gold-gradient">
+                    What Investors Should Understand Before They Sell
+                </span>
+            </h1>
+
+            <p class="text-white/65 text-base md:text-lg leading-relaxed max-w-3xl mt-7">
+                Capital gains are not simply about the profit you see on a statement.
+                The tax treatment depends on the asset, holding period, transaction
+                and applicable provisions.
+            </p>
+
+            <div class="flex flex-wrap gap-3 text-white/45 text-xs mt-7">
+
+                <span>August 2026</span>
+                <span>•</span>
+                <span>6–8 min read</span>
+                <span>•</span>
+                <span>Aayushman Financial Services</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ARTICLE
+    ====================================================== -->
+
+    <main class="max-w-7xl mx-auto px-5 lg:px-10 -mt-10 pb-20">
+
+        <article class="bg-white rounded-3xl shadow-2xl p-7 md:p-12 lg:p-16">
+
+            <div class="grid lg:grid-cols-[minmax(0,1fr)_245px] gap-12 lg:gap-16">
+
+                <!-- ARTICLE CONTENT -->
+
+                <div class="article-content max-w-3xl">
+
+                    <p>
+                        Investors often focus on the return generated by an investment
+                        and only later ask what portion may be taxable. A better approach
+                        is to consider taxation as part of the investment decision—
+                        especially when selling a large position, restructuring a portfolio
+                        or funding a family goal.
+                    </p>
+
+
+                    <h2>
+                        What is a capital gain?
+                    </h2>
+
+                    <p>
+                        The Income Tax Department describes capital gains as profits or
+                        gains arising from the transfer of a capital asset. The treatment
+                        depends on the nature of the asset and the rules applicable to
+                        the transaction.
+                    </p>
+
+
+                    <h2>
+                        Short-term versus long-term
+                    </h2>
+
+                    <p>
+                        One of the first questions is how long the asset has been held.
+                        For several listed securities and equity-oriented mutual funds,
+                        the relevant holding-period test is 12 months. Other assets can
+                        have different thresholds. The classification matters because
+                        short-term and long-term gains can be taxed differently.
+                    </p>
+
+                    <p>
+                        Do not assume that the same tax rule applies to equity shares,
+                        debt investments, real estate and every type of fund. Asset
+                        classification must be checked before calculating tax.
+                    </p>
+
+
+                    <h2>
+                        Equity-oriented investments
+                    </h2>
+
+                    <p>
+                        For eligible listed equity shares and equity-oriented mutual fund
+                        units, long-term gains under section 112A are subject to the
+                        applicable rate above the specified annual exemption threshold.
+                        Current Income Tax Department guidance for AY 2026–27 refers to
+                        a ₹1.25 lakh threshold for eligible section 112A long-term gains.
+                    </p>
+
+                    <p>
+                        Short-term gains on specified listed equity and equity-oriented
+                        mutual-fund transactions can be subject to a special rate.
+                        Because tax rules can change, verify the rate applicable to the
+                        relevant assessment year rather than relying on an old tax chart.
+                    </p>
+
+
+                    <div class="article-quote">
+                        Tax should influence the route to a financial goal—not dictate
+                        the goal itself.
+                    </div>
+
+
+                    <h2>
+                        Tax planning is not tax chasing
+                    </h2>
+
+                    <p>
+                        Tax efficiency matters, but it should not become the only reason
+                        for holding an unsuitable investment. A tax saving is not useful
+                        if it causes an investor to keep a position that no longer fits
+                        the family’s risk or goal.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Why are we selling—goal funding, risk reduction, liquidity
+                            or restructuring?
+                        </li>
+
+                        <li>
+                            What is the actual taxable gain after considering the
+                            applicable cost and rules?
+                        </li>
+
+                        <li>
+                            Can the transaction be timed sensibly without compromising
+                            the investment objective?
+                        </li>
+
+                    </ul>
+
+
+                    <h2>
+                        For mutual-fund investors
+                    </h2>
+
+                    <p>
+                        Before switching between schemes, remember that a switch is
+                        generally treated as a redemption from the source scheme and
+                        a purchase into the destination scheme. That means a switch
+                        can have tax consequences even though the money never reaches
+                        your bank account.
+                    </p>
+
+                    <p>
+                        Good tax planning usually starts before the transaction.
+                        Keep contract notes, statements, purchase records and other
+                        records needed to establish investment history.
+                    </p>
+
+
+                    <div class="article-callout">
+
+                        <strong>
+                            Important:
+                        </strong>
+
+                        <p>
+                            Tax treatment is fact-specific. For a large transaction,
+                            estate transfer or complex portfolio, consult a qualified
+                            tax professional before acting.
+                        </p>
+
+                    </div>
+
+
+                    <h2>
+                        The bottom line
+                    </h2>
+
+                    <p>
+                        Capital gains tax is easiest to manage when it is considered
+                        before the transaction rather than after it. Build investments
+                        around goals, review the portfolio periodically, maintain good
+                        records and bring tax considerations into the decision-making
+                        process early.
+                    </p>
+
+
+                    <!-- SOURCES -->
+
+                    <div class="article-sources">
+
+                        <b>
+                            Sources & further reading
+                        </b>
+
+                        <br>
+
+                        <a href="https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/file-itr-2-online"
+                            target="_blank"
+                            rel="noopener">
+                            Income Tax Department – ITR-2
+                        </a>
+
+                        <br>
+
+                        <a href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1"
+                            target="_blank"
+                            rel="noopener">
+                            Income Tax Department – AY 2026–27 guidance
+                        </a>
+
+                        <p class="!text-xs !text-gray-500 mt-4">
+                            This article is for education and general information only.
+                            It is not a recommendation to buy or sell any security or
+                            financial product. Tax rules, market conditions and regulations
+                            may change.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="hidden lg:block">
+
+                    <div class="sticky top-28">
+
+                        <div class="article-side-card">
+
+                            <b>
+                                Our Lens
+                            </b>
+
+                            <p>
+                                Good wealth decisions are less about predicting the next
+                                move and more about building a portfolio that can withstand
+                                uncertainty.
+                            </p>
+
+                        </div>
+
+
+                        <div class="article-side-card">
+
+                            <b>
+                                Remember
+                            </b>
+
+                            <p>
+                                Returns matter, but the route you take to reach your goals
+                                matters just as much.
+                            </p>
+
+                        </div>
+
+
+                        <div class="bg-navy rounded-2xl p-6 text-white">
+
+                            <p class="text-gold text-xs uppercase tracking-widest font-semibold">
+                                Need help?
+                            </p>
+
+                            <p class="font-heading font-bold text-lg mt-2">
+                                Let's discuss your portfolio.
+                            </p>
+
+                            <p class="text-white/50 text-xs leading-relaxed mt-3">
+                                Get a personalised perspective on your investment and
+                                wealth planning needs.
+                            </p>
+
+                            <a href="../index.html#appointment"
+                                class="inline-block bg-gold text-navy font-semibold text-xs px-5 py-3 rounded-full mt-5 hover:bg-gold-600 transition">
+                                Book Consultation
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="bg-navy-950 pt-20 pb-8 border-t border-white/5">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div class="grid md:grid-cols-5 gap-10">
+
+                <!-- BRAND -->
+
+                <div class="md:col-span-2">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+
+                            <img src="../asset/logo.jpg"
+                                alt="Logo"
+                                class="h-9 w-9 object-contain rounded-full">
+
+                        </div>
+
+                        <span class="font-heading font-bold tracking-wide text-white text-lg leading-tight">
+                            AAYUSHMAN FINANCIAL<br>
+                            SERVICES PRIVATE LIMITED
+                        </span>
+
+                    </div>
+
+                    <p class="text-white/45 text-sm mt-5 leading-relaxed max-w-sm">
+                        Premium wealth management and financial planning for Indian
+                        families — helping you build, preserve and transfer wealth
+                        across generations.
+                    </p>
+
+                    <div class="flex gap-3 mt-6">
+
+                        <a href="https://in.linkedin.com/in/aayushman-money-mall-130a2935a"
+                            target="_blank"
+                            rel="noopener"
+                            class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/aayushmanmoneymall/"
+                            target="_blank"
+                            rel="noopener"
+                            class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-gold transition">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div>
+
+                    <p class="font-heading font-semibold text-white text-sm mb-4">
+                        Company
+                    </p>
+
+                    <ul class="space-y-3 text-white/45 text-sm">
+
+                        <li>
+                            <a href="../index.html#who-we-are"
+                                class="hover:text-gold transition">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#team"
+                                class="hover:text-gold transition">
+                                Leadership
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#journey"
+                                class="hover:text-gold transition">
+                                Our Journey
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#knowledge"
+                                class="hover:text-gold transition">
+                                Careers
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div>
+
+                    <p class="font-heading font-semibold text-white text-sm mb-4">
+                        Services
+                    </p>
+
+                    <ul class="space-y-3 text-white/45 text-sm">
+
+                        <li>
+                            <a href="../index.html#services"
+                                class="hover:text-gold transition">
+                                Mutual Funds
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#services"
+                                class="hover:text-gold transition">
+                                PMS & AIF
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#services"
+                                class="hover:text-gold transition">
+                                Retirement Planning
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#services"
+                                class="hover:text-gold transition">
+                                Estate Planning
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- RESOURCES -->
+
+                <div>
+
+                    <p class="font-heading font-semibold text-white text-sm mb-4">
+                        Resources
+                    </p>
+
+                    <ul class="space-y-3 text-white/45 text-sm">
+
+                        <li>
+                            <a href="../index.html#calculators"
+                                class="hover:text-gold transition">
+                                Calculators
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../knowledge-center.html"
+                                class="hover:text-gold transition">
+                                Knowledge Center
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.ifaplanet.com/login.php"
+                                class="hover:text-gold transition">
+                                Client Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html#contact"
+                                class="hover:text-gold transition">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM FOOTER -->
+
+            <div class="border-t border-white/10 mt-14 pt-8
+                        flex flex-col lg:flex-row
+                        justify-between gap-4
+                        text-white/35 text-xs leading-relaxed">
+
+                <p>
+                    &copy; 2026 Aayushman Financial Services Pvt. Ltd.
+                    All rights reserved.
+                    AMFI Registered Mutual Fund Distributor,
+                    ARN-98765.
+                    SEBI Registered Investment Adviser,
+                    INA000012345.
+                </p>
+
+                <div class="flex gap-6 shrink-0">
+
+                    <a href="../privacy-policy.html"
+                        class="hover:text-gold transition">
+                        Privacy Policy
+                    </a>
+
+                    <a href="../terms-of-use.html"
+                        class="hover:text-gold transition">
+                        Terms of Use
+                    </a>
+
+                    <a href="../disclosures.html"
+                        class="hover:text-gold transition">
+                        Disclosures
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <p class="text-white/25 text-[11px] mt-6 leading-relaxed">
+                Mutual fund investments are subject to market risks.
+                Please read all scheme-related documents carefully before investing.
+                Past performance is not indicative of future returns.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MOBILE MENU SCRIPT
+    ====================================================== -->
+
+    <script>
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+
+            mobileMenu.classList.toggle('hidden');
+
+        });
+
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                mobileMenu.classList.add('hidden');
+
+            });
+
+        });
+
+    </script>
+
+
+    <!-- Reveal animation -->
+
+    <script>
+
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add('visible');
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+    </script>
+
+</body>
+
+</html>

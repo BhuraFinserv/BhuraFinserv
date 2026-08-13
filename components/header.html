@@ -1,0 +1,52 @@
+<!-- ============ NAVIGATION ============ -->
+<nav id="navbar"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5"
+    style="background-color: #0A1830;">    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
+                <span class="inline-flex items-center">
+                    <img src="asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain">
+                </span>
+            </div>
+            <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA FINSERV</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-9 font-body text-sm">
+            <a href="#who-we-are" id="nav-link-1" class="nav-link text-white/90 hover:text-white transition">About</a>
+            <a href="#services" id="nav-link-2" class="nav-link text-white/90 hover:text-white transition">Services</a>
+            <a href="#process" id="nav-link-3" class="nav-link text-white/90 hover:text-white transition">Process</a>
+            <a href="#knowledge" id="nav-link-5" class="nav-link text-white/90 hover:text-white transition">Insights</a>
+            <a href="#contact" id="nav-link-6" class="nav-link text-white/90 hover:text-white transition">Contact</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4">
+            <a href="https://www.ifaplanet.com/login.php" id="nav-login"
+                class="text-sm font-medium text-white/90 hover:text-white transition">Client
+                Login</a>
+            <a href="#appointment"
+                class="btn-ripple bg-gold hover:bg-gold-600 text-navy font-semibold text-sm px-6 py-3 rounded-full transition shadow-gold">Book
+                Consultation</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+    class="fixed inset-0 z-[60] bg-navy-950 translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex justify-between items-center px-6 py-6">
+        <span class="font-heading font-bold text-gold text-lg tracking-wide">BHURA FINSERV</span>
+        <button id="mobile-menu-close" class="text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="flex flex-col gap-6 px-8 mt-10 font-heading text-2xl text-white">
+        <a href="#who-we-are" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#process" class="mobile-link">Process</a>
+        <a href="#knowledge" class="mobile-link">Insights</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#appointment"
+            class="mt-6 inline-block bg-gold text-navy text-center font-semibold text-base px-6 py-4 rounded-full">Book
+            Consultation</a>
+    </div>
+</div>
