@@ -2757,4 +2757,41 @@ document.addEventListener('DOMContentLoaded', () => {
         ScrollTrigger.refresh();
     }, 100);
 
+
+    // ===============================
+// TEAM SLIDER
+// ===============================
+
+const teamTrack = document.getElementById("team-track");
+const teamPrev = document.getElementById("team-prev");
+const teamNext = document.getElementById("team-next");
+
+if (teamTrack && teamPrev && teamNext) {
+
+  const getTeamScrollAmount = () => {
+    const card = teamTrack.querySelector(".team-card");
+
+    if (!card) return 350;
+
+    const gap = 24;
+
+    return card.offsetWidth + gap;
+  };
+
+  teamNext.addEventListener("click", () => {
+    teamTrack.scrollBy({
+      left: getTeamScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  teamPrev.addEventListener("click", () => {
+    teamTrack.scrollBy({
+      left: -getTeamScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+}
+
 });

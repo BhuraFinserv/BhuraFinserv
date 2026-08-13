@@ -94,7 +94,7 @@
       <a href="#home" class="flex items-center gap-3">
         <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
           <span class="inline-flex items-center">
-<img src="asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain">
+            <img src="asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain">
           </span>
         </div>
         <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA FINSERV</span>
@@ -188,7 +188,7 @@
             <p>Clients Served</p>
           </div>
 
-          <div class="stat-box">
+          <div class="stat-box hidden ">
             <h2><span class="counter" data-target="42" data-suffix="+">42+</span></h2>
             <p>Years Experience</p>
           </div>
@@ -239,7 +239,7 @@
     </div>
   </section>
   <!-- ============ WHO WE ARE ============ -->
-  <section id="who-we-are" class="py-28 lg:py-36 bg-offwhite overflow-hidden">
+  <section id="who-we-are" class="py-10 md:py-28 lg:py-36 bg-offwhite overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
       <div class="relative reveal-left" data-reveal>
         <div
@@ -247,14 +247,14 @@
           <div class="absolute inset-0 opacity-20"
             style="background-image:radial-gradient(circle at 30% 20%, #C9A24B 0%, transparent 45%);"></div>
           <div class="absolute inset-0 flex items-center justify-center">
-            <img src="asset/WHO-WE-ARE.png" alt="Logo" class=" object-contain" />
+            <img src="asset/WHO-WE-ARE.webp" alt="Logo" class=" object-contain" />
           </div>
-          <div class="absolute bottom-0 left-0 right-0 p-8 glass text-white">
+          <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-8 glass text-white">
             <p class="font-heading font-semibold text-lg">Meet the founders</p>
             <p class="text-white/60 text-sm mt-1">A short film on our philosophy — 2 min</p>
           </div>
         </div>
-        <div class="absolute -bottom-8 -right-6 lg:-right-10 glass-light rounded-2xl shadow-soft p-6 w-52">
+        <div class="absolute -bottom-8 -right-6 lg:-right-10 glass-light rounded-2xl shadow-soft p-6 w-52 hidden lg:display:block">
           <p class="text-3xl font-heading font-bold text-navy">42+</p>
           <p class="text-sm text-navy/60 mt-1">Years guiding Indian families toward financial independence</p>
         </div>
@@ -299,99 +299,8 @@
     </div>
   </section>
 
-  <!-- ============ WHY CHOOSE US ============ -->
-  <section id="why-us" class="py-28 lg:py-36 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
-        <p class="kicker text-gold">Why Choose Us</p>
-        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">Advice that spans your entire balance sheet.</h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16" id="why-cards">
-        <!-- Cards injected via template below, static for reliability -->
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-chart-pie text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Financial Planning
-          </h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Goal-based
-            roadmaps that map every rupee to a purpose — retirement, education, or a legacy fund.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-seedling text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Mutual Funds</h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Curated,
-            research-backed fund portfolios rebalanced with market cycles, not emotion.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-building-columns text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Portfolio Management
-            (PMS)</h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Concentrated,
-            actively managed equity strategies for discerning high-net-worth investors.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-layer-group text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Alternative Investment
-            Funds (AIF)</h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Access to
-            pre-IPO, private credit and structured strategies once reserved for institutions.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-shield-halved text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Insurance</h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Term, health
-            and asset protection structured to close the exact gaps in your plan.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-file-invoice-dollar text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Tax Planning</h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Efficient
-            structuring across capital gains, income and estate to keep more of what you earn.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-umbrella-beach text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Retirement Planning
-          </h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">
-            Income-replacement strategies engineered so your lifestyle never depends on the market's mood.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-scroll text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Estate Planning</h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Wills, trusts
-            and succession frameworks that transfer wealth exactly as you intend.</p>
-        </div>
-        <div
-          class="why-card group relative rounded-3xl border border-navy/8 p-8 bg-offwhite hover:bg-navy transition-all duration-500 cursor-pointer overflow-hidden reveal-up"
-          data-reveal>
-          <i class="fa-solid fa-briefcase text-2xl text-gold mb-6 block"></i>
-          <h3 class="font-heading font-semibold text-xl group-hover:text-white transition-colors">Corporate Treasury
-          </h3>
-          <p class="text-navy/55 group-hover:text-white/60 text-sm mt-3 leading-relaxed transition-colors">Surplus fund
-            management for businesses that treats liquidity and yield with equal discipline.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ OUR PROCESS ============ -->
-  <section id="process" class="py-28 lg:py-36 bg-navy relative overflow-hidden">
+  <section id="process" class="py-10 md:py-28 lg:py-36 bg-navy relative overflow-hidden">
     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[140px]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
@@ -400,7 +309,7 @@
           relationship.</h2>
       </div>
 
-      <div class="mt-24 relative">
+      <div class="mt-10 lg:mt-16 lg:mt-24 relative">
         <div class="hidden lg:block absolute top-8 left-0 right-0 h-[1px] bg-white/10">
           <div id="process-line" class="h-full bg-gold w-0"></div>
         </div>
@@ -456,7 +365,7 @@
   </section>
 
   <!-- ============ SERVICES ============ -->
-  <section id="services" class="py-28 lg:py-36 bg-offwhite">
+  <section id="services" class="py-10 md:py-28 lg:py-36 bg-offwhite">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 reveal-up" data-reveal>
         <div>
@@ -468,7 +377,7 @@
           every stage.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16" id="services-grid">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 lg:mt-16" id="services-grid">
         <!-- service cards -->
         <div
           class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
@@ -540,7 +449,7 @@
         </div>
 
         <div
-          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          class="team-card hidden sm:block service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
           data-reveal data-title="Retirement Planning" data-icon="fa-umbrella-beach"
           data-desc="Income-replacement strategies engineered so your lifestyle never depends on the market's mood once the paycheque stops."
           data-points="Corpus &amp; withdrawal modelling,Inflation-adjusted income,Annuity &amp; SWP structuring,Healthcare cost buffer">
@@ -557,7 +466,7 @@
         </div>
 
         <div
-          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          class="team-card hidden sm:block service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
           data-reveal data-title="Estate Planning" data-icon="fa-scroll"
           data-desc="Wills, trusts and succession frameworks that transfer wealth exactly as you intend — with minimal friction and maximum privacy."
           data-points="Will drafting support,Family trust structuring,Nomination &amp; succession audit,Cross-border asset planning">
@@ -574,7 +483,7 @@
         </div>
 
         <div
-          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
+          class="team-card hidden sm:block service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up"
           data-reveal data-title="Corporate Solutions" data-icon="fa-briefcase"
           data-desc="Surplus fund and treasury management for businesses — balancing liquidity, safety and yield with institutional discipline."
           data-points="Treasury &amp; liquidity management,Employee benefit structuring,Group insurance programs,Corporate FD &amp; debt funds">
@@ -591,7 +500,7 @@
         </div>
 
         <div
-          class="service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up sm:col-span-2 lg:col-span-1"
+          class="team-card hidden sm:block service-card tilt-card group rounded-3xl bg-white border border-navy/8 p-7 hover:shadow-premium cursor-pointer reveal-up sm:col-span-2 lg:col-span-1"
           data-reveal data-title="NRI Investments" data-icon="fa-earth-asia"
           data-desc="Seamless, compliant investment access into India for NRIs — from repatriable portfolios to property-linked wealth strategies."
           data-points="NRE/NRO advisory,FEMA-compliant structuring,Remote onboarding &amp; e-KYC,Dedicated NRI relationship desk">
@@ -627,88 +536,155 @@
   </div>
 
   <!-- ============ TEAM ============ -->
-  <section id="team" class="py-28 lg:py-36 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+  <section id="team" class="py-10 md:py-28 lg:py-36 bg-navy relative overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute bottom-0 right-0 w-[450px] h-[450px] bg-gold/5 rounded-full blur-[130px]"></div>
+    <div class="absolute top-0 left-0 w-[350px] h-[350px] bg-gold/5 rounded-full blur-[120px]"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+
+      <!-- Heading -->
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
         <p class="kicker text-gold">Leadership</p>
-        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">The team behind every portfolio.</h2>
+
+        <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 text-white">
+Meet the Team        </h2>
+
+        <p class="text-white/50 mt-5 leading-relaxed">
+          Three generations of experience, one shared commitment to building
+          wealth that lasts.
+        </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
-          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
-            <img src="asset/team/KC-Bhura.png" alt="Logo" class=" object-contain" />
+
+      <!-- Team Grid -->
+      <div class="mt-10 lg:mt-16">
+
+        <div class="flex flex-wrap justify-center gap-6">
+
+          <!-- 1. KC BHURA -->
+          <div class="team-card w-full sm:w-[320px] lg:w-[340px]
+      glass rounded-3xl overflow-hidden relative group">
+
+            <div class="aspect-[3/4] bg-navy-700 flex items-end justify-center overflow-hidden">
+              <img src="asset/team/KC-Bhura.webp" alt="KC Bhura" loading="lazy" class="w-full h-full object-cover object-top
+          transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <div class="absolute inset-0 flex flex-col justify-end p-6
+        bg-gradient-to-t from-navy via-navy/70 to-transparent
+        translate-y-16 group-hover:translate-y-0
+        transition-transform duration-500">
+
+              <p class="font-heading font-semibold text-white text-lg">
+                KC Bhura
+              </p>
+
+              <p class="text-gold text-xs mt-1">
+                Founder &amp; Visionary
+              </p>
+
+              <p class="text-white/60 text-xs mt-3
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500 delay-100">
+                42 yrs in wealth management. CFP, SEBI RIA.
+              </p>
+
+              <a href="#" class="mt-3 text-white/70 hover:text-gold text-sm
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500 delay-150">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+            </div>
           </div>
-          <div
-            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-            <p class="font-heading font-semibold text-white text-lg">KC BHURA</p>
-            <p class="text-gold text-xs mt-1">FOUNDER &amp; Visionary </p>
-            <p
-              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              42 yrs in wealth management. CFP, SEBI RIA.</p>
-            <a href="#"
-              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
-                class="fa-brands fa-linkedin"></i></a>
+
+
+          <!-- 2. LILAM KUMAR BHURA -->
+          <div class="team-card w-full sm:w-[320px] lg:w-[340px]
+      glass rounded-3xl overflow-hidden relative group">
+
+            <div class="aspect-[3/4] bg-navy-700 flex items-end justify-center overflow-hidden">
+              <img src="asset/team/Lilam-Bhura1.webp" alt="Lilam Kumar Bhura" loading="lazy" class="w-full h-full object-cover object-top
+          transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <div class="absolute inset-0 flex flex-col justify-end p-6
+        bg-gradient-to-t from-navy via-navy/70 to-transparent
+        translate-y-16 group-hover:translate-y-0
+        transition-transform duration-500">
+
+              <p class="font-heading font-semibold text-white text-lg">
+                Lilam Kumar Bhura
+              </p>
+
+              <p class="text-gold text-xs mt-1">
+                Managing Director &amp; Builder
+              </p>
+
+              <p class="text-white/60 text-xs mt-3
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500 delay-100">
+                18 yrs equity research. CFA charterholder. Ex-Kotak AMC.
+              </p>
+
+              <a href="#" class="mt-3 text-white/70 hover:text-gold text-sm
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500 delay-150">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+            </div>
           </div>
+
+
+          <!-- 3. AAYUSH BHURA -->
+          <div class="team-card w-full sm:w-[320px] lg:w-[340px]
+      glass rounded-3xl overflow-hidden relative group">
+
+            <div class="aspect-[3/4] bg-navy-700 flex items-end justify-center overflow-hidden">
+              <img src="asset/team/Aayush-Bhura2.webp" alt="Aayush Bhura" loading="lazy" class="w-full h-full object-cover object-top
+          transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <div class="absolute inset-0 flex flex-col justify-end p-6
+        bg-gradient-to-t from-navy via-navy/70 to-transparent
+        translate-y-16 group-hover:translate-y-0
+        transition-transform duration-500">
+
+              <p class="font-heading font-semibold text-white text-lg">
+                Aayush Bhura
+              </p>
+
+              <p class="text-gold text-xs mt-1">
+                Director &amp; Modernist
+              </p>
+
+              <p class="text-white/60 text-xs mt-3
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500 delay-100">
+                15 yrs planning practice. CFP. Specialist in retirement design.
+              </p>
+
+              <a href="#" class="mt-3 text-white/70 hover:text-gold text-sm
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500 delay-150">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+            </div>
+          </div>
+
         </div>
-        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
-          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
-            <img src="asset/team/Lilam-Bhura1.png" alt="Logo" class=" object-contain" />
-          </div>
-          <div
-            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-            <p class="font-heading font-semibold text-white text-lg">Lilam Kumar Bhura
-            </p>
-            <p class="text-gold text-xs mt-1">Managing Director &amp; Builder
-            </p>
-            <p
-              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              18 yrs equity research. CFA charterholder. Ex-Kotak AMC.</p>
-            <a href="#"
-              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
-                class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
-          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-start justify-center">
-            <img src="asset/team/Aayush-Bhura2.png" alt="Logo" class=" object-contain" />
-          </div>
-          <div
-            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-            <p class="font-heading font-semibold text-white text-lg"> Aayush Bhura
-            </p>
-            <p class="text-gold text-xs mt-1">Director &amp; Modernist
-            </p>
-            <p
-              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              15 yrs planning practice. CFP. Specialist in retirement design.</p>
-            <a href="#"
-              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
-                class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="team-card group relative rounded-3xl overflow-hidden bg-navy aspect-[3/4] reveal-up" data-reveal>
-          <div class="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy flex items-center justify-center">
-            <img src="asset/team/Rishika-Bhura1.png" alt="Logo" class=" object-contain" />
-          </div>
-          <div
-            class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-navy via-navy/70 to-transparent translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-            <p class="font-heading font-semibold text-white text-lg">Rishika Bhura</p>
-            <p class="text-gold text-xs mt-1">Wife of Director</p>
-            <p
-              class="text-white/60 text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              12 yrs in private wealth servicing. NRI desk lead.</p>
-            <a href="#"
-              class="mt-3 text-white/70 hover:text-gold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"><i
-                class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
+
       </div>
+    </div>
     </div>
   </section>
 
   <!-- ============ TESTIMONIALS ============ -->
-  <section id="testimonials" class="py-28 lg:py-36 bg-navy relative overflow-hidden">
+  <section id="testimonials" class="py-10 md:py-28 lg:py-36 bg-navy relative overflow-hidden">
     <div class="absolute bottom-0 right-0 w-[450px] h-[450px] bg-gold/5 rounded-full blur-[130px]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
@@ -716,7 +692,7 @@
         <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 text-white">Trusted with what matters most.</h2>
       </div>
 
-      <div class="mt-16 relative">
+      <div class="mt-10 lg:mt-16 relative">
         <div id="testimonial-track" class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
           <div class="testimonial-card snap-center shrink-0 w-[85%] sm:w-[420px] glass rounded-3xl p-8">
             <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6"><i
@@ -792,7 +768,7 @@
     </div>
   </section>
   <!-- ============ KNOWLEDGE CENTRE ============ -->
-  <section id="knowledge" class="py-28 lg:py-36 bg-offwhite">
+  <section id="knowledge" class="py-10 md:py-28 lg:py-36 bg-offwhite">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 reveal-up" data-reveal>
         <div>
@@ -801,7 +777,7 @@
         </div>
       </div>
 
-      <div id="know-track" class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 mt-16">
+      <div id="know-track" class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 mt-10 lg:mt-16">
 
         <!-- Card 1 -->
         <a href="blogs/asset-allocation.html"
@@ -939,7 +915,7 @@
   </section>
 
   <!-- ============ FINANCIAL HEALTH CHECK ============ -->
-  <section id="health-check" class="py-28 lg:py-36 bg-white">
+  <section id="health-check" class="py-10 md:py-28 lg:py-36 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-start">
       <div class="reveal-left" data-reveal>
         <p class="kicker text-gold">Interactive Tool</p>
@@ -1000,14 +976,14 @@
   </section>
 
   <!-- ============ SIP & RETIREMENT CALCULATORS ============ -->
-  <section id="calculators" class="py-28 lg:py-36 bg-offwhite">
+  <section id="calculators" class="py-10 md:py-28 lg:py-36 bg-offwhite">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
         <p class="kicker text-gold">Plan With Precision</p>
         <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4">See the numbers before you commit.</h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-6 mt-16">
+      <div class="grid lg:grid-cols-2 gap-6 mt-10 lg:mt-16">
         <!-- SIP Calculator -->
         <div class="bg-white rounded-3xl border border-navy/8 p-8 lg:p-10 reveal-up" data-reveal>
           <h3 class="font-heading font-bold text-2xl">SIP Calculator</h3>
@@ -1080,7 +1056,7 @@
   </section>
 
   <!-- ============ COMPANY JOURNEY ============ -->
-  <section id="journey" class="py-28 lg:py-36 bg-white overflow-hidden">
+  <section id="journey" class="py-10 md:py-28 lg:py-36 bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
         <p class="kicker text-gold">Our Journey</p>
@@ -1124,7 +1100,7 @@
   </section>
 
   <!-- ============ BOOK APPOINTMENT ============ -->
-  <section id="appointment" class="py-28 lg:py-36 bg-offwhite">
+  <section id="appointment" class="py-10 md:py-28 lg:py-36 bg-offwhite">
     <div class="max-w-6xl mx-auto px-6 lg:px-10">
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
         <p class="kicker text-gold">Get Started</p>
@@ -1132,7 +1108,7 @@
         <p class="text-navy/55 mt-5">Thirty minutes. No obligation. Just a clear-eyed look at where you stand.</p>
       </div>
 
-      <div class="mt-16 grid lg:grid-cols-2 gap-0 bg-white rounded-3xl shadow-premium overflow-hidden reveal-up"
+      <div class="mt-10 lg:mt-16 grid lg:grid-cols-2 gap-0 bg-white rounded-3xl shadow-premium overflow-hidden reveal-up"
         data-reveal>
         <!-- Calendar -->
         <div class="p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-navy/8">
@@ -1232,14 +1208,14 @@
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section id="contact" class="py-28 lg:py-36 bg-navy relative overflow-hidden">
+  <section id="contact" class="py-10 md:py-28 lg:py-36 bg-navy relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
       <div class="text-center max-w-2xl mx-auto reveal-up" data-reveal>
         <p class="kicker">Contact Us</p>
         <h2 class="font-heading font-bold text-4xl lg:text-5xl mt-4 text-white">Let's talk about your future.</h2>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-6 mt-16">
+      <div class="grid lg:grid-cols-3 gap-6 mt-10 lg:mt-16">
         <div class="glass rounded-3xl p-8 reveal-up" data-reveal>
           <i class="fa-solid fa-location-dot text-gold text-xl mb-4 block"></i>
           <p class="font-heading font-semibold text-white">Head Office</p>
