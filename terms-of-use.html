@@ -116,6 +116,42 @@
     .policy-nav a.active {
       color: #C9A24B;
     }
+
+    /* =========================
+       MOBILE TERMS PAGE
+       ========================= */
+    @media (max-width: 639px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      #terms-page section:first-child {
+        min-height: auto;
+      }
+
+      #terms-page .policy-card p,
+      #terms-page .policy-card li {
+        font-size: .92rem;
+        line-height: 1.7;
+      }
+
+      #terms-page article {
+        width: 100%;
+      }
+
+      #terms-page article > div:first-child {
+        box-shadow: 0 10px 30px rgba(10,24,48,.05);
+      }
+
+      #terms-page h1 {
+        font-size: 2.65rem;
+        line-height: 1.05;
+      }
+
+      #terms-page .reveal-up {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -126,7 +162,7 @@
       <a href="#home" class="flex items-center gap-3">
         <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
           <span class="inline-flex items-center">
-            <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+            <img src="asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
           </span>
         </div>
         <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA
@@ -171,11 +207,11 @@
 
 
   <main id="terms-page" class="bg-offwhite text-navy">
-    <section class="relative overflow-hidden bg-navy min-h-[48vh] flex items-center">
+    <section class="relative overflow-hidden bg-navy min-h-0 lg:min-h-[48vh] flex items-center">
       <div class="absolute inset-0 opacity-30"
         style="background-image:radial-gradient(circle at 15% 30%, rgba(201,162,75,.35), transparent 30%),radial-gradient(circle at 85% 70%, rgba(255,255,255,.08), transparent 35%);">
       </div>
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-28 w-full">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 sm:py-24 lg:py-28 w-full">
         <div class="max-w-4xl">
           <p class="kicker text-gold reveal-up" data-reveal>LEGAL &amp; GOVERNANCE</p>
           <h1
@@ -195,8 +231,8 @@
       </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-24">
-      <div class="grid lg:grid-cols-[260px_minmax(0,1fr)] gap-12 lg:gap-20">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-12 lg:py-24">
+      <div class="grid lg:grid-cols-[260px_minmax(0,1fr)] gap-6 sm:gap-8 lg:gap-20">
         <aside class="hidden lg:block">
           <div class="sticky top-28 rounded-3xl bg-white border border-navy/8 p-6 shadow-soft">
             <p class="text-[11px] uppercase tracking-[.18em] font-semibold text-gold mb-5">On this page</p>
@@ -224,48 +260,48 @@
         </aside>
 
         <article class="max-w-4xl">
-          <div class="bg-white rounded-[2rem] border border-navy/8 shadow-soft p-7 sm:p-10 lg:p-14">
-            <div class="flex items-start gap-5 pb-10 border-b border-navy/8">
-              <div class="w-14 h-14 shrink-0 rounded-2xl bg-gold/15 flex items-center justify-center">
-                <i class="fa-solid fa-file-contract text-gold text-xl"></i>
+          <div class="bg-white rounded-2xl sm:rounded-[2rem] border border-navy/8 shadow-soft p-5 sm:p-10 lg:p-14">
+            <div class="flex items-start gap-3 sm:gap-5 pb-6 sm:pb-10 border-b border-navy/8">
+              <div class="w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl sm:rounded-2xl bg-gold/15 flex items-center justify-center">
+                <i class="fa-solid fa-file-contract text-gold text-base sm:text-xl"></i>
               </div>
               <div>
                 <p class="text-xs uppercase tracking-[.18em] text-navy/40 font-semibold">Aayushman Financial Services
                   Pvt. Ltd.</p>
-                <h2 class="font-heading font-bold text-2xl sm:text-3xl mt-2">Terms of Use</h2>
+                <h2 class="font-heading font-bold text-xl sm:text-3xl mt-1.5 sm:mt-2">Terms of Use</h2>
                 <p class="text-navy/50 text-sm mt-2">Please read these terms carefully before using this website.</p>
               </div>
             </div>
 
-            <div class="mt-10 space-y-12 text-[15px] leading-8 text-navy/65">
+            <div class="mt-7 sm:mt-10 space-y-8 sm:space-y-12 text-[14px] sm:text-[15px] leading-8 text-navy/65">
               <section id="acceptance" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">01</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Acceptance of Terms</h3>
-                <p class="mt-4">By accessing or using this website, you acknowledge that you have read, understood and
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Acceptance of Terms</h3>
+                <p class="mt-3 sm:mt-4">By accessing or using this website, you acknowledge that you have read, understood and
                   agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree
                   with these terms, please do not use the website.</p>
               </section>
 
               <section id="website-use" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">02</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Use of the Website</h3>
-                <p class="mt-4">This website is provided for general informational and educational purposes. You agree
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Use of the Website</h3>
+                <p class="mt-3 sm:mt-4">This website is provided for general informational and educational purposes. You agree
                   to use it lawfully and responsibly and not to interfere with its operation, attempt unauthorised
                   access, misuse its content, or use the website for any fraudulent or unlawful purpose.</p>
               </section>
 
               <section id="information" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">03</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Information on This Website</h3>
-                <p class="mt-4">We make reasonable efforts to present information that is accurate and current. However,
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Information on This Website</h3>
+                <p class="mt-3 sm:mt-4">We make reasonable efforts to present information that is accurate and current. However,
                   information may become outdated, contain errors or be subject to change without notice. Website
                   content should not be treated as a substitute for personalised professional advice.</p>
               </section>
 
               <section id="investment" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">04</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Investment Information &amp; Disclaimer</h3>
-                <div class="mt-5 rounded-2xl bg-offwhite border border-navy/8 p-6">
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Investment Information &amp; Disclaimer</h3>
+                <div class="mt-4 sm:mt-5 rounded-2xl bg-offwhite border border-navy/8 p-4 sm:p-6">
                   <p class="text-navy/70">Investment-related information, examples, calculators, market commentary and
                     educational material are provided for general information only. They do not constitute a
                     recommendation, solicitation, guarantee of returns or assurance of future performance. Mutual fund
@@ -279,8 +315,8 @@
 
               <section id="intellectual" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">05</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Intellectual Property</h3>
-                <p class="mt-4">Unless otherwise stated, the website's text, design, graphics, logos, visual elements,
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Intellectual Property</h3>
+                <p class="mt-3 sm:mt-4">Unless otherwise stated, the website's text, design, graphics, logos, visual elements,
                   original materials and other content are owned by or licensed to Aayushman Financial Services Pvt.
                   Ltd. They may not be reproduced, modified, distributed or commercially exploited without prior written
                   permission.</p>
@@ -288,24 +324,24 @@
 
               <section id="third-party" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">06</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Third-Party Links &amp; Services</h3>
-                <p class="mt-4">The website may contain links to third-party websites, platforms or services for
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Third-Party Links &amp; Services</h3>
+                <p class="mt-3 sm:mt-4">The website may contain links to third-party websites, platforms or services for
                   convenience. We do not control or necessarily endorse third-party content and are not responsible for
                   their availability, accuracy, security or privacy practices.</p>
               </section>
 
               <section id="liability" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">07</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Limitation of Liability</h3>
-                <p class="mt-4">To the extent permitted by applicable law, Aayushman Financial Services Pvt. Ltd. shall
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Limitation of Liability</h3>
+                <p class="mt-3 sm:mt-4">To the extent permitted by applicable law, Aayushman Financial Services Pvt. Ltd. shall
                   not be liable for losses or damages arising from reliance on website content, interruptions, technical
                   issues, unauthorised access, third-party services or other events beyond our reasonable control.</p>
               </section>
 
               <section id="privacy" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">08</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Privacy</h3>
-                <p class="mt-4">Your use of this website is also subject to our Privacy Policy, which explains how
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Privacy</h3>
+                <p class="mt-3 sm:mt-4">Your use of this website is also subject to our Privacy Policy, which explains how
                   information submitted through the website may be collected, used and protected.</p>
                 <a href="privacy-policy.html"
                   class="inline-flex items-center gap-2 mt-4 text-gold font-semibold hover:gap-3 transition-all">Read
@@ -314,26 +350,26 @@
 
               <section id="law" class="scroll-mt-28">
                 <p class="text-gold text-xs font-bold tracking-[.18em]">09</p>
-                <h3 class="font-heading font-bold text-2xl text-navy mt-2">Governing Law</h3>
-                <p class="mt-4">These Terms of Use shall be governed by and interpreted in accordance with the laws
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-navy mt-1.5 sm:mt-2">Governing Law</h3>
+                <p class="mt-3 sm:mt-4">These Terms of Use shall be governed by and interpreted in accordance with the laws
                   applicable in India. Any disputes arising in connection with the website or these terms shall be
                   subject to the jurisdiction of the appropriate courts.</p>
               </section>
 
               <section id="contact" class="scroll-mt-28 pt-2">
-                <div class="rounded-3xl bg-navy p-8 sm:p-10 text-white">
+                <div class="rounded-2xl sm:rounded-3xl bg-navy p-5 sm:p-10 text-white">
                   <p class="text-gold text-xs font-bold tracking-[.18em]">10 &nbsp; CONTACT</p>
                   <h3 class="font-heading font-bold text-2xl mt-3">Questions about these terms?</h3>
                   <p class="text-white/60 mt-3 leading-relaxed">For questions, clarifications or concerns regarding
                     these Terms of Use, please contact Aayushman Financial Services Pvt. Ltd.</p>
-                  <div class="grid sm:grid-cols-2 gap-4 mt-7">
-                    <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                  <div class="grid sm:grid-cols-2 gap-3 sm:gap-4 mt-5 sm:mt-7">
+                    <div class="rounded-2xl bg-white/5 border border-white/10 p-4 sm:p-5">
                       <i class="fa-solid fa-location-dot text-gold"></i>
                       <p class="text-white/60 text-xs mt-3">Head Office</p>
                       <p class="text-sm mt-1">Aayushman Money Mall, 1st Floor, Arham Chambers, Motibagh Chowk, Shastri
                         Market, Raipur – 492001</p>
                     </div>
-                    <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                    <div class="rounded-2xl bg-white/5 border border-white/10 p-4 sm:p-5">
                       <i class="fa-solid fa-envelope text-gold"></i>
                       <p class="text-white/60 text-xs mt-3">Email</p>
                       <p class="text-sm mt-1">aayushmanmoneymall@gmail.com</p>
@@ -344,7 +380,7 @@
             </div>
 
             <div
-              class="mt-12 pt-7 border-t border-navy/8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-navy/35">
+              class="mt-8 sm:mt-12 pt-5 sm:pt-7 border-t border-navy/8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-navy/35">
               <span>Last updated: August 2026</span>
               <span>Aayushman Financial Services Pvt. Ltd.</span>
             </div>

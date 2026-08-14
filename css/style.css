@@ -173,6 +173,10 @@
         transform: translateX(60px);
     }
 
+     .reveal-right1 {
+        opacity: 0;
+    }
+
     /* Marquee */
     .marquee-track {
         display: flex;
