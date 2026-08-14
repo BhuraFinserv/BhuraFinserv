@@ -53,44 +53,44 @@
    MOBILE SPACING
 ========================= */
 
-@media (max-width: 640px) {
+        @media (max-width: 640px) {
 
-    /* Reduce overall page spacing */
-    section {
-        scroll-margin-top: 80px;
-    }
+            /* Reduce overall page spacing */
+            section {
+                scroll-margin-top: 80px;
+            }
 
-    /* Policy cards */
-    .policy-card {
-        box-shadow: 0 10px 30px rgba(10, 24, 48, .05);
-    }
+            /* Policy cards */
+            .policy-card {
+                box-shadow: 0 10px 30px rgba(10, 24, 48, .05);
+            }
 
-    .policy-card h2 {
-        font-size: 1.35rem;
-        line-height: 1.3;
-    }
+            .policy-card h2 {
+                font-size: 1.35rem;
+                line-height: 1.3;
+            }
 
-    .policy-card p,
-    .policy-card li {
-        font-size: .91rem;
-        line-height: 1.7;
-    }
+            .policy-card p,
+            .policy-card li {
+                font-size: .91rem;
+                line-height: 1.7;
+            }
 
-    .policy-card h3 {
-        font-size: .95rem;
-        margin-top: 1.1rem;
-    }
+            .policy-card h3 {
+                font-size: .95rem;
+                margin-top: 1.1rem;
+            }
 
-    /* Remove excessive whitespace */
-    .policy-card ul {
-        margin-top: .5rem;
-    }
+            /* Remove excessive whitespace */
+            .policy-card ul {
+                margin-top: .5rem;
+            }
 
-    .policy-card li {
-        margin: .2rem 0;
-    }
+            .policy-card li {
+                margin: .2rem 0;
+            }
 
-}
+        }
 
         .font-heading {
             font-family: 'Playfair Display', serif;
@@ -174,7 +174,8 @@
             <a href="index.html" class="flex items-center gap-3">
                 <div class="w-9 h-9 rounded-full border border-gold flex items-center justify-center">
                     <span class="inline-flex items-center">
-                        <img src="/asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" />
+                        <img src="asset/logo.jpg" alt="Logo" class="h-10 w-10 object-contain" loading="lazy"
+                            decoding="async" />
                     </span>
                 </div>
                 <span id="brand-text" class="font-heading font-bold tracking-wide text-white text-lg">BHURA
@@ -286,7 +287,8 @@
                             </p>
                         </section>
 
-                        <section id="information" class="policy-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 reveal">
+                        <section id="information"
+                            class="policy-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 reveal">
                             <p class="text-gold text-xs font-semibold uppercase tracking-[.18em]">02</p>
                             <h2 class="mt-3">Information we collect</h2>
                             <p class="mt-5">Depending on how you interact with us, information may include:</p>
@@ -439,9 +441,9 @@
     </main>
 
     <!-- FOOTER -->
-  <div id="footer-component"></div>
+    <div id="footer-component"></div>
 
-  <script src="js/components.js"></script>
+    <script src="js/components.js"></script>
 
     <script>
         const menuBtn = document.getElementById('mobile-menu-btn');
